@@ -1,4 +1,4 @@
-# CodePathApp
+# Recipe WIP
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -8,7 +8,8 @@
 
 ## Overview
 ### Description
-[Description of your app]
+Ever open your refridgerator and wonder what you can make? **insert app name here** can help you with that! 
+**insert app name here** keeps track of what food ingredients are in your fridge. Whenever you don't know what to make, **insert app name here** will suggest recipes based off of the food you have.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
