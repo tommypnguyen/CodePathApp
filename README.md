@@ -12,7 +12,6 @@ Ever open your refridgerator and wonder what you can make? **insert app name her
 **insert app name here** keeps track of what food ingredients are in your fridge. Whenever you don't know what to make, **insert app name here** will suggest recipes based off of the food you have.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Food & Drink, Utility
 - **Mobile:** This app would be primarily developed as a mobile app, since the user won't usually be using a computer while in the kitchen.
 - **Story:** User buys food ingredients from the groceries store, inputs what they bought into the app. When they want to cook, they can open the app, and the app will suggest recipes based on ingredients. 
@@ -33,15 +32,30 @@ Ever open your refridgerator and wonder what you can make? **insert app name her
 **Optional Nice-to-have Stories**
 * Distinguish personal or family accounts
 * Filter recipes based on user preferences (e.g. cuisine, include/exclude ingredient, pricing... etc.)
+* User can change password
+* Partner with nearby groceries store and suggest optimal pricing and available ingredients
+* Add an expiration reminder for ingredients that are about to go bad
+* Have an automatic ingredient scanner (e.g. using the receipt or Google's image object recognition API)
+* Also suggest recipes if the user is only missing a few ingredients
+  * Either suggest substitutes, or where the ingredients can be obtained at nearby groceries
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Sign in
+  * The app will remember the user's login information after exiting the app
+* Register 
+  * User enters name, email, and password
+* Scanning Screen
+  * User can manually enter the ingredients they bought
+* Ingredients Screen 
+  * Lists out all the ingredients that are in the fridge
+  * User can manually remove ingredients 
+* Suggestions Screen
+  * Suggests multiple recipes based on the ingredients the user have in their fridge
+* Recipes Screen
+  * Show the steps and ingredients to make the recipe
+* Settings Screen
+  * Options to clear your fridge, change password
 
 ### 3. Navigation
 
