@@ -8,31 +8,31 @@
 
 ## Overview
 ### Description
-Ever open your refridgerator and wonder what you can make? **insert app name here** can help you with that! 
+Ever open your refridgerator and wonder what you can make? **insert app name here** can help you with that! </br>
 **insert app name here** keeps track of what food ingredients are in your fridge. Whenever you don't know what to make, **insert app name here** will suggest recipes based off of the food you have.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Food & Drink, Utility
+- **Mobile:** This app would be primarily developed as a mobile app, since the user won't usually be using a computer while in the kitchen.
+- **Story:** User buys food ingredients from the groceries store, inputs what they bought into the app. When they want to cook, they can open the app, and the app will suggest recipes based on ingredients. 
+- **Market:** Any individual that likes and needs to cook can use this app. For example, college students who have leftover ingredients and are wondering what they can make. 
+- **Habit:** The app can be used in many ways, such as when the user wants to use up all the leftover ingredients in the fridge, save money, or just find new recipes. 
+- **Scope:** The app first just recommends recipes based on the user's ingredients. Eventually, the app could integrate with smart fridges to automate the process. If the app grows bigger, it could also partner with nearby groceries store for better pricing and available ingredients.
 
 ## Product Spec
 
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-
-* [fill in your required user stories here]
-* ...
+* Sign-Up & Login accounts
+* Scan and input groceries the user bought 
+* Display current ingredients in the fridge 
+* Suggest recipes based on current ingredients
 
 **Optional Nice-to-have Stories**
-
-* [fill in your required user stories here]
-* ...
+* Distinguish personal or family accounts
+* Filter recipes based on user preferences (e.g. cuisine, include/exclude ingredient, pricing... etc.)
 
 ### 2. Screen Archetypes
 
