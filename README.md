@@ -1,4 +1,4 @@
-# Recipe WIP
+# SugoiFridge
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -8,8 +8,8 @@
 
 ## Overview
 ### Description
-Ever open your refridgerator and wonder what you can make? **insert app name here** can help you with that! </br>
-**insert app name here** keeps track of what food ingredients are in your fridge. Whenever you don't know what to make, **insert app name here** will suggest recipes based off of the food you have.
+Ever open your refridgerator and wonder what you can make? **SugoiFridge** can help you with that! </br>
+**SugoiFridge** keeps track of what food ingredients are in your fridge. Whenever you don't know what to make, **SugoiFridge** will suggest recipes based off of the food you have.
 
 ### App Evaluation
 - **Category:** Food & Drink, Utility
