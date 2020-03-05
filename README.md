@@ -41,9 +41,9 @@ Ever open your refridgerator and wonder what you can make? **insert app name her
 
 ### 2. Screen Archetypes
 
-* Sign in
+* Sign-in Screen
   * The app will remember the user's login information after exiting the app
-* Register 
+* Register Screen
   * User enters name, email, and password
 * Scanning Screen
   * User can manually enter the ingredients they bought
@@ -61,18 +61,25 @@ Ever open your refridgerator and wonder what you can make? **insert app name her
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Scanning
+* Settings
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Sign-in Screen
+   * -> Register Screen
+   * -> Ingredients Screen
+* Register Screen
+   * -> Sign-in Screen
+* Scanning Screen
+  * -> Ingredients Screen
+* Ingredients Screen 
+  * -> Scanning Screen
+  * -> Suggestions Screen
+* Suggestions Screen
+  * -> Recipes Screen
+* Recipes Screen
+  * -> Ingredients Screen
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
