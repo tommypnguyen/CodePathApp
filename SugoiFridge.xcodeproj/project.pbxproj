@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D106C35F24145C66000B5396 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C35E24145C66000B5396 /* TestStoryboard.storyboard */; };
+		D106C36124145E5B000B5396 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106C36024145E5B000B5396 /* TestViewController.swift */; };
 		D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359A24144C5E00441130 /* AppDelegate.swift */; };
 		D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359C24144C5E00441130 /* SceneDelegate.swift */; };
-		D18E359F24144C5E00441130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359E24144C5E00441130 /* ViewController.swift */; };
 		D18E35A224144C5E00441130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A024144C5E00441130 /* Main.storyboard */; };
 		D18E35A424144C6300441130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A324144C6300441130 /* Assets.xcassets */; };
 		D18E35A724144C6300441130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A524144C6300441130 /* LaunchScreen.storyboard */; };
@@ -35,10 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D106C35E24145C66000B5396 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
+		D106C36024145E5B000B5396 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		D18E359724144C5E00441130 /* SugoiFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugoiFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E359A24144C5E00441130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D18E359C24144C5E00441130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D18E359E24144C5E00441130 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D18E35A124144C5E00441130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D18E35A324144C6300441130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D18E35A624144C6300441130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D106C35924145515000B5396 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D18E359A24144C5E00441130 /* AppDelegate.swift */,
+				D18E359C24144C5E00441130 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		D106C35A24145524000B5396 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D106C36024145E5B000B5396 /* TestViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D106C35B2414552E000B5396 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D106C35E24145C66000B5396 /* TestStoryboard.storyboard */,
+				D18E35A024144C5E00441130 /* Main.storyboard */,
+				D18E35A524144C6300441130 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		D18E358E24144C5E00441130 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +128,10 @@
 		D18E359924144C5E00441130 /* SugoiFridge */ = {
 			isa = PBXGroup;
 			children = (
-				D18E359A24144C5E00441130 /* AppDelegate.swift */,
-				D18E359C24144C5E00441130 /* SceneDelegate.swift */,
-				D18E359E24144C5E00441130 /* ViewController.swift */,
-				D18E35A024144C5E00441130 /* Main.storyboard */,
+				D106C35B2414552E000B5396 /* Storyboards */,
+				D106C35A24145524000B5396 /* View Controllers */,
+				D106C35924145515000B5396 /* Delegates */,
 				D18E35A324144C6300441130 /* Assets.xcassets */,
-				D18E35A524144C6300441130 /* LaunchScreen.storyboard */,
 				D18E35A824144C6300441130 /* Info.plist */,
 			);
 			path = SugoiFridge;
@@ -235,6 +262,7 @@
 				D18E35A724144C6300441130 /* LaunchScreen.storyboard in Resources */,
 				D18E35A424144C6300441130 /* Assets.xcassets in Resources */,
 				D18E35A224144C5E00441130 /* Main.storyboard in Resources */,
+				D106C35F24145C66000B5396 /* TestStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D18E359F24144C5E00441130 /* ViewController.swift in Sources */,
 				D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */,
+				D106C36124145E5B000B5396 /* TestViewController.swift in Sources */,
 				D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
