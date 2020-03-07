@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359A24144C5E00441130 /* AppDelegate.swift */; };
+		D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359C24144C5E00441130 /* SceneDelegate.swift */; };
+		D18E359F24144C5E00441130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359E24144C5E00441130 /* ViewController.swift */; };
+		D18E35A224144C5E00441130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A024144C5E00441130 /* Main.storyboard */; };
+		D18E35A424144C6300441130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A324144C6300441130 /* Assets.xcassets */; };
+		D18E35A724144C6300441130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A524144C6300441130 /* LaunchScreen.storyboard */; };
+		D18E35B224144C6400441130 /* SugoiFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35B124144C6400441130 /* SugoiFridgeTests.swift */; };
+		D18E35BD24144C6400441130 /* SugoiFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D18E35AE24144C6400441130 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D18E358F24144C5E00441130 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D18E359624144C5E00441130;
+			remoteInfo = SugoiFridge;
+		};
+		D18E35B924144C6400441130 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D18E358F24144C5E00441130 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D18E359624144C5E00441130;
+			remoteInfo = SugoiFridge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D18E359724144C5E00441130 /* SugoiFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugoiFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D18E359A24144C5E00441130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D18E359C24144C5E00441130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D18E359E24144C5E00441130 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D18E35A124144C5E00441130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D18E35A324144C6300441130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D18E35A624144C6300441130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D18E35A824144C6300441130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D18E35AD24144C6400441130 /* SugoiFridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugoiFridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D18E35B124144C6400441130 /* SugoiFridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugoiFridgeTests.swift; sourceTree = "<group>"; };
+		D18E35B324144C6400441130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D18E35B824144C6400441130 /* SugoiFridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugoiFridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugoiFridgeUITests.swift; sourceTree = "<group>"; };
+		D18E35BE24144C6400441130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D18E359424144C5E00441130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D18E35AA24144C6400441130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D18E35B524144C6400441130 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D18E358E24144C5E00441130 = {
+			isa = PBXGroup;
+			children = (
+				D18E359924144C5E00441130 /* SugoiFridge */,
+				D18E35B024144C6400441130 /* SugoiFridgeTests */,
+				D18E35BB24144C6400441130 /* SugoiFridgeUITests */,
+				D18E359824144C5E00441130 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D18E359824144C5E00441130 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D18E359724144C5E00441130 /* SugoiFridge.app */,
+				D18E35AD24144C6400441130 /* SugoiFridgeTests.xctest */,
+				D18E35B824144C6400441130 /* SugoiFridgeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D18E359924144C5E00441130 /* SugoiFridge */ = {
+			isa = PBXGroup;
+			children = (
+				D18E359A24144C5E00441130 /* AppDelegate.swift */,
+				D18E359C24144C5E00441130 /* SceneDelegate.swift */,
+				D18E359E24144C5E00441130 /* ViewController.swift */,
+				D18E35A024144C5E00441130 /* Main.storyboard */,
+				D18E35A324144C6300441130 /* Assets.xcassets */,
+				D18E35A524144C6300441130 /* LaunchScreen.storyboard */,
+				D18E35A824144C6300441130 /* Info.plist */,
+			);
+			path = SugoiFridge;
+			sourceTree = "<group>";
+		};
+		D18E35B024144C6400441130 /* SugoiFridgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D18E35B124144C6400441130 /* SugoiFridgeTests.swift */,
+				D18E35B324144C6400441130 /* Info.plist */,
+			);
+			path = SugoiFridgeTests;
+			sourceTree = "<group>";
+		};
+		D18E35BB24144C6400441130 /* SugoiFridgeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */,
+				D18E35BE24144C6400441130 /* Info.plist */,
+			);
+			path = SugoiFridgeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D18E359624144C5E00441130 /* SugoiFridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D18E35C124144C6400441130 /* Build configuration list for PBXNativeTarget "SugoiFridge" */;
+			buildPhases = (
+				D18E359324144C5E00441130 /* Sources */,
+				D18E359424144C5E00441130 /* Frameworks */,
+				D18E359524144C5E00441130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SugoiFridge;
+			productName = SugoiFridge;
+			productReference = D18E359724144C5E00441130 /* SugoiFridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D18E35AC24144C6400441130 /* SugoiFridgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D18E35C424144C6400441130 /* Build configuration list for PBXNativeTarget "SugoiFridgeTests" */;
+			buildPhases = (
+				D18E35A924144C6400441130 /* Sources */,
+				D18E35AA24144C6400441130 /* Frameworks */,
+				D18E35AB24144C6400441130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D18E35AF24144C6400441130 /* PBXTargetDependency */,
+			);
+			name = SugoiFridgeTests;
+			productName = SugoiFridgeTests;
+			productReference = D18E35AD24144C6400441130 /* SugoiFridgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D18E35B724144C6400441130 /* SugoiFridgeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D18E35C724144C6400441130 /* Build configuration list for PBXNativeTarget "SugoiFridgeUITests" */;
+			buildPhases = (
+				D18E35B424144C6400441130 /* Sources */,
+				D18E35B524144C6400441130 /* Frameworks */,
+				D18E35B624144C6400441130 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D18E35BA24144C6400441130 /* PBXTargetDependency */,
+			);
+			name = SugoiFridgeUITests;
+			productName = SugoiFridgeUITests;
+			productReference = D18E35B824144C6400441130 /* SugoiFridgeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D18E358F24144C5E00441130 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = TAR;
+				TargetAttributes = {
+					D18E359624144C5E00441130 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					D18E35AC24144C6400441130 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = D18E359624144C5E00441130;
+					};
+					D18E35B724144C6400441130 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = D18E359624144C5E00441130;
+					};
+				};
+			};
+			buildConfigurationList = D18E359224144C5E00441130 /* Build configuration list for PBXProject "SugoiFridge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D18E358E24144C5E00441130;
+			productRefGroup = D18E359824144C5E00441130 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D18E359624144C5E00441130 /* SugoiFridge */,
+				D18E35AC24144C6400441130 /* SugoiFridgeTests */,
+				D18E35B724144C6400441130 /* SugoiFridgeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D18E359524144C5E00441130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D18E35A724144C6300441130 /* LaunchScreen.storyboard in Resources */,
+				D18E35A424144C6300441130 /* Assets.xcassets in Resources */,
+				D18E35A224144C5E00441130 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D18E35AB24144C6400441130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D18E35B624144C6400441130 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D18E359324144C5E00441130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D18E359F24144C5E00441130 /* ViewController.swift in Sources */,
+				D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */,
+				D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D18E35A924144C6400441130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D18E35B224144C6400441130 /* SugoiFridgeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D18E35B424144C6400441130 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D18E35BD24144C6400441130 /* SugoiFridgeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D18E35AF24144C6400441130 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D18E359624144C5E00441130 /* SugoiFridge */;
+			targetProxy = D18E35AE24144C6400441130 /* PBXContainerItemProxy */;
+		};
+		D18E35BA24144C6400441130 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D18E359624144C5E00441130 /* SugoiFridge */;
+			targetProxy = D18E35B924144C6400441130 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D18E35A024144C5E00441130 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D18E35A124144C5E00441130 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D18E35A524144C6300441130 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D18E35A624144C6300441130 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D18E35BF24144C6400441130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D18E35C024144C6400441130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D18E35C224144C6400441130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SugoiFridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tar.SugoiFridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D18E35C324144C6400441130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SugoiFridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tar.SugoiFridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D18E35C524144C6400441130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SugoiFridgeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tar.SugoiFridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SugoiFridge.app/SugoiFridge";
+			};
+			name = Debug;
+		};
+		D18E35C624144C6400441130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SugoiFridgeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tar.SugoiFridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SugoiFridge.app/SugoiFridge";
+			};
+			name = Release;
+		};
+		D18E35C824144C6400441130 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SugoiFridgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tar.SugoiFridgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SugoiFridge;
+			};
+			name = Debug;
+		};
+		D18E35C924144C6400441130 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SugoiFridgeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tar.SugoiFridgeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SugoiFridge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D18E359224144C5E00441130 /* Build configuration list for PBXProject "SugoiFridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D18E35BF24144C6400441130 /* Debug */,
+				D18E35C024144C6400441130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D18E35C124144C6400441130 /* Build configuration list for PBXNativeTarget "SugoiFridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D18E35C224144C6400441130 /* Debug */,
+				D18E35C324144C6400441130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D18E35C424144C6400441130 /* Build configuration list for PBXNativeTarget "SugoiFridgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D18E35C524144C6400441130 /* Debug */,
+				D18E35C624144C6400441130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D18E35C724144C6400441130 /* Build configuration list for PBXNativeTarget "SugoiFridgeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D18E35C824144C6400441130 /* Debug */,
+				D18E35C924144C6400441130 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D18E358F24144C5E00441130 /* Project object */;
+}
