@@ -82,7 +82,6 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
   * -> Ingredients Screen
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="https://i.imgur.com/tOGrKi5.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
