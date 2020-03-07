@@ -83,7 +83,7 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://imgur.com/tOGrKi5" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
