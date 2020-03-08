@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17536FE324147A51004FDBD5 /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17536FE224147A51004FDBD5 /* FridgeViewController.swift */; };
 		D106C36124145E5B000B5396 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106C36024145E5B000B5396 /* TestViewController.swift */; };
 		D106C36324146D8A000B5396 /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36224146D8A000B5396 /* Input.storyboard */; };
 		D106C36524146DAF000B5396 /* Fridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36424146DAF000B5396 /* Fridge.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17536FE224147A51004FDBD5 /* FridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		D106C36024145E5B000B5396 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		D106C36224146D8A000B5396 /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
 		D106C36424146DAF000B5396 /* Fridge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fridge.storyboard; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				D106C36024145E5B000B5396 /* TestViewController.swift */,
+				17536FE224147A51004FDBD5 /* FridgeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */,
+				17536FE324147A51004FDBD5 /* FridgeViewController.swift in Sources */,
 				D106C36124145E5B000B5396 /* TestViewController.swift in Sources */,
 				D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */,
 			);
