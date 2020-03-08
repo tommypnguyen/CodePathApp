@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D106C35F24145C66000B5396 /* TestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C35E24145C66000B5396 /* TestStoryboard.storyboard */; };
 		D106C36124145E5B000B5396 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106C36024145E5B000B5396 /* TestViewController.swift */; };
+		D106C36324146D8A000B5396 /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36224146D8A000B5396 /* Input.storyboard */; };
+		D106C36524146DAF000B5396 /* Fridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36424146DAF000B5396 /* Fridge.storyboard */; };
+		D106C36724146DBE000B5396 /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36624146DBE000B5396 /* Recipes.storyboard */; };
+		D106C36924146F11000B5396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36824146F11000B5396 /* Main.storyboard */; };
+		D106C36B241471F0000B5396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36A241471F0000B5396 /* LaunchScreen.storyboard */; };
 		D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359A24144C5E00441130 /* AppDelegate.swift */; };
 		D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359C24144C5E00441130 /* SceneDelegate.swift */; };
-		D18E35A224144C5E00441130 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A024144C5E00441130 /* Main.storyboard */; };
 		D18E35A424144C6300441130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A324144C6300441130 /* Assets.xcassets */; };
-		D18E35A724144C6300441130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A524144C6300441130 /* LaunchScreen.storyboard */; };
 		D18E35B224144C6400441130 /* SugoiFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35B124144C6400441130 /* SugoiFridgeTests.swift */; };
 		D18E35BD24144C6400441130 /* SugoiFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */; };
 /* End PBXBuildFile section */
@@ -36,14 +38,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D106C35E24145C66000B5396 /* TestStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TestStoryboard.storyboard; sourceTree = "<group>"; };
 		D106C36024145E5B000B5396 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		D106C36224146D8A000B5396 /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
+		D106C36424146DAF000B5396 /* Fridge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fridge.storyboard; sourceTree = "<group>"; };
+		D106C36624146DBE000B5396 /* Recipes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
+		D106C36824146F11000B5396 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D106C36A241471F0000B5396 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D18E359724144C5E00441130 /* SugoiFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugoiFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E359A24144C5E00441130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D18E359C24144C5E00441130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D18E35A124144C5E00441130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D18E35A324144C6300441130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D18E35A624144C6300441130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D18E35A824144C6300441130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D18E35AD24144C6400441130 /* SugoiFridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugoiFridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E35B124144C6400441130 /* SugoiFridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugoiFridgeTests.swift; sourceTree = "<group>"; };
@@ -98,9 +102,11 @@
 		D106C35B2414552E000B5396 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				D106C35E24145C66000B5396 /* TestStoryboard.storyboard */,
-				D18E35A024144C5E00441130 /* Main.storyboard */,
-				D18E35A524144C6300441130 /* LaunchScreen.storyboard */,
+				D106C36424146DAF000B5396 /* Fridge.storyboard */,
+				D106C36224146D8A000B5396 /* Input.storyboard */,
+				D106C36A241471F0000B5396 /* LaunchScreen.storyboard */,
+				D106C36824146F11000B5396 /* Main.storyboard */,
+				D106C36624146DBE000B5396 /* Recipes.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -259,10 +265,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D18E35A724144C6300441130 /* LaunchScreen.storyboard in Resources */,
 				D18E35A424144C6300441130 /* Assets.xcassets in Resources */,
-				D18E35A224144C5E00441130 /* Main.storyboard in Resources */,
-				D106C35F24145C66000B5396 /* TestStoryboard.storyboard in Resources */,
+				D106C36924146F11000B5396 /* Main.storyboard in Resources */,
+				D106C36524146DAF000B5396 /* Fridge.storyboard in Resources */,
+				D106C36B241471F0000B5396 /* LaunchScreen.storyboard in Resources */,
+				D106C36724146DBE000B5396 /* Recipes.storyboard in Resources */,
+				D106C36324146D8A000B5396 /* Input.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,25 +331,6 @@
 			targetProxy = D18E35B924144C6400441130 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D18E35A024144C5E00441130 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D18E35A124144C5E00441130 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D18E35A524144C6300441130 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D18E35A624144C6300441130 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D18E35BF24144C6400441130 /* Debug */ = {
