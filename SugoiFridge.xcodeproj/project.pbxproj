@@ -14,6 +14,9 @@
 		D106C36724146DBE000B5396 /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36624146DBE000B5396 /* Recipes.storyboard */; };
 		D106C36924146F11000B5396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36824146F11000B5396 /* Main.storyboard */; };
 		D106C36B241471F0000B5396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36A241471F0000B5396 /* LaunchScreen.storyboard */; };
+		D1763E332415AF19006F4413 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1763E322415AF19006F4413 /* IngredientTableViewCell.swift */; };
+		D1763E382415DFEE006F4413 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1763E372415DFEE006F4413 /* Constants.swift */; };
+		D1763E3A2415E16F006F4413 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1763E392415E16F006F4413 /* InputViewController.swift */; };
 		D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359A24144C5E00441130 /* AppDelegate.swift */; };
 		D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359C24144C5E00441130 /* SceneDelegate.swift */; };
 		D18E35A424144C6300441130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A324144C6300441130 /* Assets.xcassets */; };
@@ -46,6 +49,9 @@
 		D106C36624146DBE000B5396 /* Recipes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
 		D106C36824146F11000B5396 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D106C36A241471F0000B5396 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1763E322415AF19006F4413 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
+		D1763E372415DFEE006F4413 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D1763E392415E16F006F4413 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		D18E359724144C5E00441130 /* SugoiFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugoiFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E359A24144C5E00441130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D18E359C24144C5E00441130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,8 +102,9 @@
 		D106C35A24145524000B5396 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D106C36024145E5B000B5396 /* TestViewController.swift */,
+				D1763E392415E16F006F4413 /* InputViewController.swift */,
 				17536FE224147A51004FDBD5 /* FridgeViewController.swift */,
+				D106C36024145E5B000B5396 /* TestViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -112,6 +119,22 @@
 				D106C36624146DBE000B5396 /* Recipes.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D1763E2D2415AE4F006F4413 /* Rich Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1763E322415AF19006F4413 /* IngredientTableViewCell.swift */,
+			);
+			path = "Rich Views";
+			sourceTree = "<group>";
+		};
+		D1763E362415DFD5006F4413 /* Rich Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D1763E372415DFEE006F4413 /* Constants.swift */,
+			);
+			path = "Rich Enums";
 			sourceTree = "<group>";
 		};
 		D18E358E24144C5E00441130 = {
@@ -137,9 +160,11 @@
 		D18E359924144C5E00441130 /* SugoiFridge */ = {
 			isa = PBXGroup;
 			children = (
+				D106C35924145515000B5396 /* Delegates */,
 				D106C35B2414552E000B5396 /* Storyboards */,
 				D106C35A24145524000B5396 /* View Controllers */,
-				D106C35924145515000B5396 /* Delegates */,
+				D1763E362415DFD5006F4413 /* Rich Enums */,
+				D1763E2D2415AE4F006F4413 /* Rich Views */,
 				D18E35A324144C6300441130 /* Assets.xcassets */,
 				D18E35A824144C6300441130 /* Info.plist */,
 			);
@@ -300,6 +325,9 @@
 			files = (
 				D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */,
 				17536FE324147A51004FDBD5 /* FridgeViewController.swift in Sources */,
+				D1763E3A2415E16F006F4413 /* InputViewController.swift in Sources */,
+				D1763E332415AF19006F4413 /* IngredientTableViewCell.swift in Sources */,
+				D1763E382415DFEE006F4413 /* Constants.swift in Sources */,
 				D106C36124145E5B000B5396 /* TestViewController.swift in Sources */,
 				D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */,
 			);
