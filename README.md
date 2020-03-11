@@ -105,6 +105,13 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 #### List of network requests by screen
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
+ * Home Feed Screen  
+  * -> (Read/Get) All of a User's ingredients
+  * -> (Create/Post) Add an ingredient to a User's fridge
+  * -> (Delete) Delete an ingredient in a User's fridge
+ * Recipe Screen
+  * -> (Read/Get) Get recipes based on ingredients in User's fridge
+  * -> (Read/Get) Get specific recipe based on what User clicks on
 
 #### Existing API Endpoints
 ##### TabScanner
@@ -121,4 +128,7 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 
 |   HTTP Verb   |    Endpoint   |  Description |
 | ------------- | ------------- | -------------|
-|  Content   | Content | Content |
+|  GET   | recipes/findByIngredients | Find a list of recipes based on ingredients passed in |
+|  GET     | recipes/{id}/information       | Get specific information about selected recipe     |
+|  GET      | recipes/{id}/analyzedInstructions       | Get recipe steps for specific recipe     |
+
