@@ -82,16 +82,27 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
   * -> Ingredients Screen
 
 ## Wireframes
-<img src="https://i.imgur.com/tOGrKi5.png" width=600>
+<img src="https://imgur.com/Lszpqqv.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+### Digital Wireframes & Mockups
+<img src="https://i.imgur.com/tOGrKi5.png" width=600>
 
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+#### FoodItem
+|   Property    |      Type     |  Description |
+| ------------- | ------------- | -------------|
+|  objectID   | String | Unique ID of each FoodItem (required). |
+|  createdAt  |  Date  | Date that FoodItem was added to the table (automatic). |
+|  updatedAt  |  Date  | Latest date that the FoodItem info was updated (automatic). |
+|  foodName   | String | Market name of the FoodItem, e.g. "potato" (required). |
+| compartment | String | Which compartment of the fridge the FoodItem is stored in, i.e. "fridge", "freezer", "drawer" (required). | 
+|   quantity  | Number | Amount of the FoodItem the user stored (required). | 
+|     unit    | String | Unit of measurement for the quantity of the FoodItem (required). |
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
