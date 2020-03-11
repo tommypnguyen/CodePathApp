@@ -105,23 +105,22 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 #### List of network requests by screen
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
- * Home Feed Screen  
-  * -> (Read/Get) All of a User's ingredients
-  * -> (Create/Post) Add an ingredient to a User's fridge
-  * -> (Delete) Delete an ingredient in a User's fridge
- * Recipe Screen
-  * -> (Read/Get) Get recipes based on ingredients in User's fridge
-  * -> (Read/Get) Get specific recipe based on what User clicks on
+* Home Feed Screen  
+ * -> (Read/Get) All of a User's ingredients
+ * -> (Create/Post) Add an ingredient to a User's fridge
+ * -> (Delete) Delete an ingredient in a User's fridge
+* Recipe Screen
+ * -> (Read/Get) Get recipes based on ingredients in User's fridge
+ * -> (Read/Get) Get specific recipe based on what User clicks on
 
 #### Existing API Endpoints
 ##### TabScanner
-- Base URL: https://api.tabscanner.com
+- Base URL: https://api.tabscanner.com/api
 
 |   HTTP Verb   |    Endpoint   |  Description |
 | ------------- | ------------- | ------------- |
-|  Content      | Content       | Content     |
-|  Content      | Content       | Content     |
-
+|     POST      | /2/process?file=file | Submit an image of a receipt to be processed, returns a token representing the processed text from the receipt. |
+|      GET      | /result/{token} | Retrieve processed text from a receipt based on a unique token. |
 
 ##### Spoonacular
 - Base URL: https://api.spoonacular.com/
@@ -131,4 +130,4 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 |  GET   | recipes/findByIngredients | Find a list of recipes based on ingredients passed in |
 |  GET     | recipes/{id}/information       | Get specific information about selected recipe     |
 |  GET      | recipes/{id}/analyzedInstructions       | Get recipe steps for specific recipe     |
-
+|      GET      | /food/ingredients/{id}/information | Get basic information about a particular ingredient, e.g. name, price, unit... etc. |
