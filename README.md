@@ -103,15 +103,13 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 
 ### Networking
 #### List of network requests by screen
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-* Home Feed Screen  
- * -> (Read/Get) All of a User's ingredients
- * -> (Create/Post) Add an ingredient to a User's fridge
- * -> (Delete) Delete an ingredient in a User's fridge
-* Recipe Screen
- * -> (Read/Get) Get recipes based on ingredients in User's fridge
- * -> (Read/Get) Get specific recipe based on what User clicks on
+* Ingredients Screen  
+   * -> (Read/GET) Obtain list of a User's ingredients
+* Scanning Screen
+   * -> (Create/POST) Add ingredient(s) to a User's fridge
+* Fridge Screen
+   * -> (Update/PUT) Change existing ingredient(s) information in the database, e.g. its quantity
+   * -> (Delete) Delete a ingredient(s) in a User's fridge
 
 #### Existing API Endpoints
 ##### TabScanner
