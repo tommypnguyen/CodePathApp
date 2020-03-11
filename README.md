@@ -96,20 +96,38 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 |  objectID   | String | Unique ID of each FoodItem (required). |
 |  createdAt  |  Date  | Date that FoodItem was added to the table (automatic). |
 |  updatedAt  |  Date  | Latest date that the FoodItem info was updated (automatic). |
+|    userID   | Pointer to User | A reference pointer to a User in Users table that own the ingredient (required). |
 |  foodName   | String | Market name of the FoodItem, e.g. "potato" (required). |
 | compartment | String | Which compartment of the fridge the FoodItem is stored in, i.e. "fridge", "freezer", "drawer" (required). | 
+|    aisle    | String | Type of aisle ingredient belongs to in a grocery store, e.g. milk is in "dairy" aisle (required). |
 |   quantity  | Number | Amount of the FoodItem the user stored (required). | 
 |     unit    | String | Unit of measurement for the quantity of the FoodItem (required). |
 
 ### Networking
 #### List of network requests by screen
 * Ingredients Screen  
-   * -> (Read/GET) Obtain list of a User's ingredients
+   * (Read/GET) Obtain list of a User's ingredients
+   ```
+   let query = PFQuery(className: "FoodItem")
+   query.whereKey("userID", equalTo: currentUser)
+   query.order(byAscending: "compartment")
+   query.addAscendingOrder("aisle")
+   query.addAscendingOrder("foodName")
+   
+   query.findObjectsInBackground { (ingredients: [PFObject]?, error: Error?) in 
+      if let error = error {
+         print(error.localizedDescription)
+      } else if let posts = posts {
+         print("Successfully retrieved ingredients in user's fridge.")
+         // TODO: display ingredients 
+      }
+   }
+   ```
 * Scanning Screen
-   * -> (Create/POST) Add ingredient(s) to a User's fridge
+   * (Create/POST) Add ingredient(s) to a User's fridge
 * Fridge Screen
-   * -> (Update/PUT) Change existing ingredient(s) information in the database, e.g. its quantity
-   * -> (Delete) Delete a ingredient(s) in a User's fridge
+   * (Update/PUT) Change existing ingredient(s) information in the database, e.g. its quantity
+   * (Delete) Delete a ingredient(s) in a User's fridge
 
 #### Existing API Endpoints
 ##### TabScanner
