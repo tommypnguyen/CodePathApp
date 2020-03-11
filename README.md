@@ -87,14 +87,12 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 ### Digital Wireframes & Mockups
 <img src="https://i.imgur.com/tOGrKi5.png" width=600>
 
-### [BONUS] Interactive Prototype
-
 ## Schema 
 
 ### Models
 #### FoodItem
 |   Property    |      Type     |  Description |
-| ------------- | ------------- | -------------|
+| ------------- | ------------- | ------------- |
 |  objectID   | String | Unique ID of each FoodItem (required). |
 |  createdAt  |  Date  | Date that FoodItem was added to the table (automatic). |
 |  updatedAt  |  Date  | Latest date that the FoodItem info was updated (automatic). |
@@ -104,6 +102,23 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 |     unit    | String | Unit of measurement for the quantity of the FoodItem (required). |
 
 ### Networking
+#### List of network requests by screen
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+#### Existing API Endpoints
+##### TabScanner
+- Base URL: https://api.tabscanner.com
+
+|   HTTP Verb   |    Endpoint   |  Description |
+| ------------- | ------------- | ------------- |
+|  Content      | Content       | Content     |
+|  Content      | Content       | Content     |
+
+
+##### Spoonacular
+- Base URL: https://api.spoonacular.com/
+
+|   HTTP Verb   |    Endpoint   |  Description |
+| ------------- | ------------- | -------------|
+|  Content   | Content | Content |
