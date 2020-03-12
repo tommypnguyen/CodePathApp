@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" secondItem="ELI-vX-ybf" secondAttribute="height" multiplier="414:725" id="Y5Q-UM-mZS"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FridgeFoodCategoryCell" rowHeight="191" id="q1q-5b-hPB" customClass="FridgeTableViewCell" customModule="SugoiFridge" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FridgeFoodCategoryCell" rowHeight="191" id="q1q-5b-hPB" customClass="FridgeTableViewCell" customModule="SugoiFridge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="191"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q1q-5b-hPB" id="VXf-GO-7n9">
