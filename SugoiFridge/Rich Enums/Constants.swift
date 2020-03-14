@@ -18,6 +18,8 @@ enum ReuseIdentifiers : String {
 }
 
 enum SpoonacularAPI : String {
+    case richAPIKey = "4a920a238fce46328d701af0ece929cf"
     case baseURL = "https://api.spoonacular.com"
     case autocomplete = "/food/ingredients/autocomplete"
+    case parseIngredient = "/recipes/parseIngredients"
 }

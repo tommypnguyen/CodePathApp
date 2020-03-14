@@ -69,6 +69,34 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("searching...")
         
+        // Check if search bar is empty
+        if searchBar.text == "" {
+            print("Search cannot be empty")
+            
+            // TODO: display dialogue box
+        }
+        else {
+            parseIngredientsRequest()
+        }
+    }
+    
+    
+    // MARK: - Network Requests
+    func parseIngredientsRequest() {
+        var url = SpoonacularAPI.baseURL.rawValue + SpoonacularAPI.parseIngredient.rawValue
+        url += "?apiKey=\(SpoonacularAPI.richAPIKey.rawValue)"
         
+        let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"]
+        let parameters: [String : Any] = ["ingredientList": searchBar.text!, "servings": 1]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers)
+            .validate().responseJSON { response in
+                switch response.result {
+                    case .success(let data):
+                        print("Request successful:\n\(data)")
+                    case .failure(let error):
+                        print("Request failed with error: \(error)")
+                }
+        }
     }
 }
