@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		17536FE324147A51004FDBD5 /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17536FE224147A51004FDBD5 /* FridgeViewController.swift */; };
+		5A46A71D72DA76ADF3A10C92 /* Pods_SugoiFridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C727C1B4E1E6ECCAB43716C2 /* Pods_SugoiFridgeTests.framework */; };
+		834008724ECD04D20EA287FC /* Pods_SugoiFridge_SugoiFridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612A9145C31D31071BDBDAC7 /* Pods_SugoiFridge_SugoiFridgeUITests.framework */; };
+		958C42FAEAF8CBA81FB37805 /* Pods_SugoiFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272BB5456D4388393D18B257 /* Pods_SugoiFridge.framework */; };
 		D106C36124145E5B000B5396 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106C36024145E5B000B5396 /* TestViewController.swift */; };
 		D106C36324146D8A000B5396 /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36224146D8A000B5396 /* Input.storyboard */; };
 		D106C36524146DAF000B5396 /* Fridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36424146DAF000B5396 /* Fridge.storyboard */; };
@@ -22,6 +25,9 @@
 		D18E35A424144C6300441130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A324144C6300441130 /* Assets.xcassets */; };
 		D18E35B224144C6400441130 /* SugoiFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35B124144C6400441130 /* SugoiFridgeTests.swift */; };
 		D18E35BD24144C6400441130 /* SugoiFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */; };
+		D1B7F532241C99D100BAC5DC /* APICallers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7F531241C99D100BAC5DC /* APICallers.swift */; };
+		D1B7F534241CA5A800BAC5DC /* SearchIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7F533241CA5A800BAC5DC /* SearchIngredientViewController.swift */; };
+		D1B7F536241CA61000BAC5DC /* NewIngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B7F535241CA61000BAC5DC /* NewIngredientTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,15 @@
 
 /* Begin PBXFileReference section */
 		17536FE224147A51004FDBD5 /* FridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
+		23C33B342287197A2AEF9822 /* Pods-SugoiFridge-SugoiFridgeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugoiFridge-SugoiFridgeUITests.release.xcconfig"; path = "Target Support Files/Pods-SugoiFridge-SugoiFridgeUITests/Pods-SugoiFridge-SugoiFridgeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		272BB5456D4388393D18B257 /* Pods_SugoiFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugoiFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		612A9145C31D31071BDBDAC7 /* Pods_SugoiFridge_SugoiFridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugoiFridge_SugoiFridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE39FA8E83A8936F98DF88D /* Pods-SugoiFridgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugoiFridgeTests.release.xcconfig"; path = "Target Support Files/Pods-SugoiFridgeTests/Pods-SugoiFridgeTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B8E18B3771A1F1E23051A58 /* Pods-SugoiFridge-SugoiFridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugoiFridge-SugoiFridgeUITests.debug.xcconfig"; path = "Target Support Files/Pods-SugoiFridge-SugoiFridgeUITests/Pods-SugoiFridge-SugoiFridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABE489087800AE0C19F194C7 /* Pods-SugoiFridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugoiFridgeTests.debug.xcconfig"; path = "Target Support Files/Pods-SugoiFridgeTests/Pods-SugoiFridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B232A809D7A9186173E97D53 /* Pods-SugoiFridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugoiFridge.release.xcconfig"; path = "Target Support Files/Pods-SugoiFridge/Pods-SugoiFridge.release.xcconfig"; sourceTree = "<group>"; };
+		C727C1B4E1E6ECCAB43716C2 /* Pods_SugoiFridgeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugoiFridgeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7B5F93036DAD74B9E1B70E7 /* Pods-SugoiFridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugoiFridge.debug.xcconfig"; path = "Target Support Files/Pods-SugoiFridge/Pods-SugoiFridge.debug.xcconfig"; sourceTree = "<group>"; };
 		D106C36024145E5B000B5396 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		D106C36224146D8A000B5396 /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
 		D106C36424146DAF000B5396 /* Fridge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fridge.storyboard; sourceTree = "<group>"; };
@@ -63,6 +78,9 @@
 		D18E35B824144C6400441130 /* SugoiFridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugoiFridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugoiFridgeUITests.swift; sourceTree = "<group>"; };
 		D18E35BE24144C6400441130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B7F531241C99D100BAC5DC /* APICallers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallers.swift; sourceTree = "<group>"; };
+		D1B7F533241CA5A800BAC5DC /* SearchIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIngredientViewController.swift; sourceTree = "<group>"; };
+		D1B7F535241CA61000BAC5DC /* NewIngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIngredientTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				958C42FAEAF8CBA81FB37805 /* Pods_SugoiFridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A46A71D72DA76ADF3A10C92 /* Pods_SugoiFridgeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +104,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				834008724ECD04D20EA287FC /* Pods_SugoiFridge_SugoiFridgeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19A41D9EB5D80BF145C08C9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7B5F93036DAD74B9E1B70E7 /* Pods-SugoiFridge.debug.xcconfig */,
+				B232A809D7A9186173E97D53 /* Pods-SugoiFridge.release.xcconfig */,
+				9B8E18B3771A1F1E23051A58 /* Pods-SugoiFridge-SugoiFridgeUITests.debug.xcconfig */,
+				23C33B342287197A2AEF9822 /* Pods-SugoiFridge-SugoiFridgeUITests.release.xcconfig */,
+				ABE489087800AE0C19F194C7 /* Pods-SugoiFridgeTests.debug.xcconfig */,
+				6AE39FA8E83A8936F98DF88D /* Pods-SugoiFridgeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D106C35924145515000B5396 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +138,7 @@
 			children = (
 				D1763E392415E16F006F4413 /* InputViewController.swift */,
 				17536FE224147A51004FDBD5 /* FridgeViewController.swift */,
+				D1B7F533241CA5A800BAC5DC /* SearchIngredientViewController.swift */,
 				D106C36024145E5B000B5396 /* TestViewController.swift */,
 			);
 			path = "View Controllers";
@@ -121,10 +156,19 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		D150C617241C74870065F33F /* Rich Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D1B7F531241C99D100BAC5DC /* APICallers.swift */,
+			);
+			path = "Rich Helpers";
+			sourceTree = "<group>";
+		};
 		D1763E2D2415AE4F006F4413 /* Rich Views */ = {
 			isa = PBXGroup;
 			children = (
 				D1763E322415AF19006F4413 /* IngredientTableViewCell.swift */,
+				D1B7F535241CA61000BAC5DC /* NewIngredientTableViewCell.swift */,
 			);
 			path = "Rich Views";
 			sourceTree = "<group>";
@@ -144,6 +188,8 @@
 				D18E35B024144C6400441130 /* SugoiFridgeTests */,
 				D18E35BB24144C6400441130 /* SugoiFridgeUITests */,
 				D18E359824144C5E00441130 /* Products */,
+				19A41D9EB5D80BF145C08C9D /* Pods */,
+				FA610113BDE201774DF09F75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +210,7 @@
 				D106C35B2414552E000B5396 /* Storyboards */,
 				D106C35A24145524000B5396 /* View Controllers */,
 				D1763E362415DFD5006F4413 /* Rich Enums */,
+				D150C617241C74870065F33F /* Rich Helpers */,
 				D1763E2D2415AE4F006F4413 /* Rich Views */,
 				D18E35A324144C6300441130 /* Assets.xcassets */,
 				D18E35A824144C6300441130 /* Info.plist */,
@@ -189,6 +236,16 @@
 			path = SugoiFridgeUITests;
 			sourceTree = "<group>";
 		};
+		FA610113BDE201774DF09F75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				272BB5456D4388393D18B257 /* Pods_SugoiFridge.framework */,
+				612A9145C31D31071BDBDAC7 /* Pods_SugoiFridge_SugoiFridgeUITests.framework */,
+				C727C1B4E1E6ECCAB43716C2 /* Pods_SugoiFridgeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D18E35C124144C6400441130 /* Build configuration list for PBXNativeTarget "SugoiFridge" */;
 			buildPhases = (
+				D1A143B87EACCA4A2EAF2333 /* [CP] Check Pods Manifest.lock */,
 				D18E359324144C5E00441130 /* Sources */,
 				D18E359424144C5E00441130 /* Frameworks */,
 				D18E359524144C5E00441130 /* Resources */,
+				261D388A12059D2F6A0E078F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +272,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D18E35C424144C6400441130 /* Build configuration list for PBXNativeTarget "SugoiFridgeTests" */;
 			buildPhases = (
+				85748D1ECBE09405B49F18B0 /* [CP] Check Pods Manifest.lock */,
 				D18E35A924144C6400441130 /* Sources */,
 				D18E35AA24144C6400441130 /* Frameworks */,
 				D18E35AB24144C6400441130 /* Resources */,
@@ -231,9 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D18E35C724144C6400441130 /* Build configuration list for PBXNativeTarget "SugoiFridgeUITests" */;
 			buildPhases = (
+				1D5DEF9A0760E916E257AD83 /* [CP] Check Pods Manifest.lock */,
 				D18E35B424144C6400441130 /* Sources */,
 				D18E35B524144C6400441130 /* Frameworks */,
 				D18E35B624144C6400441130 /* Resources */,
+				4C2A1A351C3302EE694F26B4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,6 +380,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D5DEF9A0760E916E257AD83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SugoiFridge-SugoiFridgeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		261D388A12059D2F6A0E078F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SugoiFridge/Pods-SugoiFridge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SugoiFridge/Pods-SugoiFridge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SugoiFridge/Pods-SugoiFridge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C2A1A351C3302EE694F26B4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SugoiFridge-SugoiFridgeUITests/Pods-SugoiFridge-SugoiFridgeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SugoiFridge-SugoiFridgeUITests/Pods-SugoiFridge-SugoiFridgeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SugoiFridge-SugoiFridgeUITests/Pods-SugoiFridge-SugoiFridgeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85748D1ECBE09405B49F18B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SugoiFridgeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1A143B87EACCA4A2EAF2333 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SugoiFridge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D18E359324144C5E00441130 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -326,9 +491,12 @@
 				D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */,
 				17536FE324147A51004FDBD5 /* FridgeViewController.swift in Sources */,
 				D1763E3A2415E16F006F4413 /* InputViewController.swift in Sources */,
+				D1B7F534241CA5A800BAC5DC /* SearchIngredientViewController.swift in Sources */,
 				D1763E332415AF19006F4413 /* IngredientTableViewCell.swift in Sources */,
 				D1763E382415DFEE006F4413 /* Constants.swift in Sources */,
+				D1B7F536241CA61000BAC5DC /* NewIngredientTableViewCell.swift in Sources */,
 				D106C36124145E5B000B5396 /* TestViewController.swift in Sources */,
+				D1B7F532241C99D100BAC5DC /* APICallers.swift in Sources */,
 				D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +590,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -475,12 +644,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		D18E35C224144C6400441130 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7B5F93036DAD74B9E1B70E7 /* Pods-SugoiFridge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -498,6 +669,7 @@
 		};
 		D18E35C324144C6400441130 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B232A809D7A9186173E97D53 /* Pods-SugoiFridge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -515,6 +687,7 @@
 		};
 		D18E35C524144C6400441130 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABE489087800AE0C19F194C7 /* Pods-SugoiFridgeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +709,7 @@
 		};
 		D18E35C624144C6400441130 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AE39FA8E83A8936F98DF88D /* Pods-SugoiFridgeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +731,7 @@
 		};
 		D18E35C824144C6400441130 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B8E18B3771A1F1E23051A58 /* Pods-SugoiFridge-SugoiFridgeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -576,6 +751,7 @@
 		};
 		D18E35C924144C6400441130 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23C33B342287197A2AEF9822 /* Pods-SugoiFridge-SugoiFridgeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
