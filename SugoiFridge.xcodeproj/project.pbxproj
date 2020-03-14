@@ -11,6 +11,7 @@
 		5A46A71D72DA76ADF3A10C92 /* Pods_SugoiFridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C727C1B4E1E6ECCAB43716C2 /* Pods_SugoiFridgeTests.framework */; };
 		834008724ECD04D20EA287FC /* Pods_SugoiFridge_SugoiFridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612A9145C31D31071BDBDAC7 /* Pods_SugoiFridge_SugoiFridgeUITests.framework */; };
 		958C42FAEAF8CBA81FB37805 /* Pods_SugoiFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272BB5456D4388393D18B257 /* Pods_SugoiFridge.framework */; };
+		D10303FA241D6860002FE8E9 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10303F9241D6860002FE8E9 /* Structs.swift */; };
 		D106C36124145E5B000B5396 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106C36024145E5B000B5396 /* TestViewController.swift */; };
 		D106C36324146D8A000B5396 /* Input.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36224146D8A000B5396 /* Input.storyboard */; };
 		D106C36524146DAF000B5396 /* Fridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36424146DAF000B5396 /* Fridge.storyboard */; };
@@ -58,6 +59,7 @@
 		B232A809D7A9186173E97D53 /* Pods-SugoiFridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugoiFridge.release.xcconfig"; path = "Target Support Files/Pods-SugoiFridge/Pods-SugoiFridge.release.xcconfig"; sourceTree = "<group>"; };
 		C727C1B4E1E6ECCAB43716C2 /* Pods_SugoiFridgeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugoiFridgeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B5F93036DAD74B9E1B70E7 /* Pods-SugoiFridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugoiFridge.debug.xcconfig"; path = "Target Support Files/Pods-SugoiFridge/Pods-SugoiFridge.debug.xcconfig"; sourceTree = "<group>"; };
+		D10303F9241D6860002FE8E9 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		D106C36024145E5B000B5396 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		D106C36224146D8A000B5396 /* Input.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Input.storyboard; sourceTree = "<group>"; };
 		D106C36424146DAF000B5396 /* Fridge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fridge.storyboard; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				D1763E372415DFEE006F4413 /* Constants.swift */,
+				D10303F9241D6860002FE8E9 /* Structs.swift */,
 			);
 			path = "Rich Enums";
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */,
 				17536FE324147A51004FDBD5 /* FridgeViewController.swift in Sources */,
 				D1763E3A2415E16F006F4413 /* InputViewController.swift in Sources */,
+				D10303FA241D6860002FE8E9 /* Structs.swift in Sources */,
 				D1B7F534241CA5A800BAC5DC /* SearchIngredientViewController.swift in Sources */,
 				D1763E332415AF19006F4413 /* IngredientTableViewCell.swift in Sources */,
 				D1763E382415DFEE006F4413 /* Constants.swift in Sources */,

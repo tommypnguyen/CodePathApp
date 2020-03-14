@@ -9,6 +9,7 @@ target 'SugoiFridge' do
   pod "Alamofire"
   pod "AlamofireImage"
   pod "Parse"
+  pod "SwiftyJSON", "~> 4.0"
 
   target 'SugoiFridgeTests' do
     inherit! :search_paths

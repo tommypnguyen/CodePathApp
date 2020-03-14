@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import SwiftyJSON
 import UIKit
 
 class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
@@ -15,6 +16,8 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    var ingredientsList: [Ingredient] = []
     
     
     // MARK: - Initialization
@@ -45,7 +48,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     
     // MARK: - Table View DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return ingredientsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,11 +58,13 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
 //
 //        return cell
         let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.inputTableView.rawValue) as! IngredientTableViewCell
+        
+        let ingredient = ingredientsList[indexPath.row]
 
-        cell.ingredientNameLabel.text = "Tomatoes"
-        cell.amountLabel.text = "1"
-        cell.unitLabel.text   = "lb"
-        cell.drawerLabel.text = "Vegetables"
+        cell.ingredientNameLabel.text = ingredient.name
+        cell.amountLabel.text = String(format: "%.1f", ingredient.amount)
+        cell.unitLabel.text   = ingredient.unit
+        cell.drawerLabel.text = ingredient.aisle
 
         return cell
     }
@@ -67,8 +72,6 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     
     // MARK: - Search Bar Functions
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("searching...")
-        
         // Check if search bar is empty
         if searchBar.text == "" {
             print("Search cannot be empty")
@@ -92,11 +95,36 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers)
             .validate().responseJSON { response in
                 switch response.result {
-                    case .success(let data):
-                        print("Request successful:\n\(data)")
+                    case .success(let value):
+                        print("Spoonacular API request success")
+                        
+                        let jsonData = JSON(value)
+                        self.parseIngredient(from: jsonData)
+                    
+                        self.tableView.reloadData()
+                        
                     case .failure(let error):
-                        print("Request failed with error: \(error)")
+                        print("Spoonacular API request failed with error: \(error)")
                 }
         }
+    }
+    
+    
+    // MARK: - Data Parsing
+    func parseIngredient(from data: JSON) {
+        let data = data[0]
+        
+        let id     = data["id"].intValue
+        let name   = data["name"].stringValue
+        let image  = data["image"].stringValue
+        let unit   = data["unitShort"].stringValue
+        let amount = data["amount"].doubleValue
+        let aisle  = data["aisle"].stringValue
+        let posUnits = data["possibleUnits"].arrayValue.map { $0.stringValue }
+        let estCosts = data["estimatedCost"].dictionaryValue
+        
+        let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, possibleUnits: posUnits, cost: estCosts)
+        
+        ingredientsList.append(ingredient)
     }
 }
