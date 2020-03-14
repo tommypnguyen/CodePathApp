@@ -13,6 +13,10 @@ class IngredientTableViewCell: UITableViewCell {
     // MARK: - Properties
     @IBOutlet weak var ingredientImage: UIImageView!
     @IBOutlet weak var ingredientNameLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var unitLabel: UILabel!
+    @IBOutlet weak var compartmentLabel: UILabel!
+    @IBOutlet weak var drawerLabel: UILabel!
     
     
     // MARK: - Initialization

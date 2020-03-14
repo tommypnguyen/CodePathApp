@@ -9,11 +9,12 @@
 import Alamofire
 import UIKit
 
-class InputViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
 
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
     // MARK: - Initialization
@@ -22,6 +23,7 @@ class InputViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // Setting up delegates
         setupTableView()
+        setupSearchBar()
 
         // UI Customizations
         customizeDoneButton()
@@ -30,6 +32,10 @@ class InputViewController: UIViewController, UITableViewDataSource, UITableViewD
     func setupTableView() {
         tableView.delegate   = self
         tableView.dataSource = self
+    }
+    
+    func setupSearchBar() {
+        searchBar.delegate = self
     }
     
     func customizeDoneButton() {
@@ -51,7 +57,18 @@ class InputViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.inputTableView.rawValue) as! IngredientTableViewCell
 
         cell.ingredientNameLabel.text = "Tomatoes"
+        cell.amountLabel.text = "1"
+        cell.unitLabel.text   = "lb"
+        cell.drawerLabel.text = "Vegetables"
 
         return cell
+    }
+    
+    
+    // MARK: - Search Bar Functions
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("searching...")
+        
+        
     }
 }

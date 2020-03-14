@@ -50,16 +50,5 @@ class SearchIngredientViewController: UIViewController, UISearchBarDelegate, UIT
     // MARK: - Search Bar Functions
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("searching...")
-        
-        // Request to Spoonacular for ingredient info
-        
-        /*
-        let url = String(format: SpoonacularAPI.ingredientInfo.rawValue, <#T##arguments: CVarArg...##CVarArg#>)
-        AF.request(SpoonacularAPI.ingredientInfo, method: <#T##HTTPMethod#>, parameters: <#T##Parameters?#>, encoding: <#T##ParameterEncoding#>, headers: <#T##HTTPHeaders?#>, interceptor: <#T##RequestInterceptor?#>)
-        */
-        
-        // Store ingredient onto Parse
-        
-        // Display ingredient on screen
     }
 }

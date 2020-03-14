@@ -18,5 +18,6 @@ enum ReuseIdentifiers : String {
 }
 
 enum SpoonacularAPI : String {
-    case ingredientInfo = "https://api.spoonacular.com/food/ingredients/%d/information"
+    case baseURL = "https://api.spoonacular.com"
+    case autocomplete = "/food/ingredients/autocomplete"
 }
