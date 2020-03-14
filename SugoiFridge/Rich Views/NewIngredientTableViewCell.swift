@@ -11,8 +11,8 @@ import UIKit
 class NewIngredientTableViewCell: UITableViewCell {
 
     // MARK: - Properties
+    @IBOutlet weak var ingredientImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
     
     
     // MARK: - Initialization

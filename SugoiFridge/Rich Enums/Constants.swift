@@ -14,6 +14,7 @@ enum CustomUI : Int {
 
 enum ReuseIdentifiers : String {
     case inputTableView = "IngredientTableViewCell"
+    case newIngTableView = "NewIngredientTableViewCell"
 }
 
 enum SpoonacularAPI : String {

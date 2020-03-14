@@ -11,6 +11,7 @@ import UIKit
 class SearchIngredientViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Properties
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     
@@ -18,7 +19,13 @@ class SearchIngredientViewController: UIViewController, UISearchBarDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTableView()
         setupSearchBar()
+    }
+    
+    func setupTableView() {
+        tableView.dataSource = self
+        tableView.delegate   = self
     }
     
     func setupSearchBar() {
@@ -32,7 +39,9 @@ class SearchIngredientViewController: UIViewController, UISearchBarDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.newIngTableView.rawValue) as! NewIngredientTableViewCell
+        
+        cell.nameLabel.text = "Chicken"
         
         return cell
     }

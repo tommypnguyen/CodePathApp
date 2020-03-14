@@ -34,16 +34,18 @@
                                                         <constraint firstAttribute="width" secondItem="gmG-AN-phO" secondAttribute="height" multiplier="1:1" id="pYD-xZ-HIX"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chicken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKq-eI-Abj">
-                                                    <rect key="frame" x="186" y="63" width="62" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKq-eI-Abj">
+                                                    <rect key="frame" x="163" y="63" width="251" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="EKq-eI-Abj" firstAttribute="centerY" secondItem="ocE-tB-Sup" secondAttribute="centerY" id="Fa3-dv-GDj"/>
+                                                <constraint firstAttribute="trailing" secondItem="EKq-eI-Abj" secondAttribute="trailing" id="KdQ-3M-Yri"/>
                                                 <constraint firstAttribute="bottom" secondItem="gmG-AN-phO" secondAttribute="bottom" constant="8" id="UyM-Af-Jlc"/>
+                                                <constraint firstItem="EKq-eI-Abj" firstAttribute="leading" secondItem="gmG-AN-phO" secondAttribute="trailing" constant="16" id="V99-Xj-CeD"/>
                                                 <constraint firstItem="gmG-AN-phO" firstAttribute="top" secondItem="ocE-tB-Sup" secondAttribute="top" constant="8" id="gow-sg-QQH"/>
                                                 <constraint firstItem="gmG-AN-phO" firstAttribute="leading" secondItem="ocE-tB-Sup" secondAttribute="leading" constant="16" id="kou-Ff-hdZ"/>
                                             </constraints>
@@ -141,7 +143,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unb-gv-mQJ">
-                                                    <rect key="frame" x="96" y="39.5" width="107" height="17"/>
+                                                    <rect key="frame" x="96" y="39.5" width="298" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -155,6 +157,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Unb-gv-mQJ" firstAttribute="leading" secondItem="6h3-lX-q5M" secondAttribute="trailing" constant="8" id="0MS-UH-fzR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Unb-gv-mQJ" secondAttribute="trailing" id="Yq1-cd-bly"/>
                                                 <constraint firstItem="6h3-lX-q5M" firstAttribute="leading" secondItem="5Jb-td-XLG" secondAttribute="leading" constant="8" id="ZAV-wb-X1I"/>
                                                 <constraint firstItem="Unb-gv-mQJ" firstAttribute="centerY" secondItem="5Jb-td-XLG" secondAttribute="centerY" id="kyp-Pm-8zs"/>
                                                 <constraint firstAttribute="bottom" secondItem="6h3-lX-q5M" secondAttribute="bottom" constant="8" id="nQY-xO-NKj"/>
@@ -162,7 +165,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageView" destination="6h3-lX-q5M" id="tyo-HL-PNS"/>
+                                            <outlet property="ingredientImage" destination="6h3-lX-q5M" id="ivp-sb-3a0"/>
                                             <outlet property="nameLabel" destination="Unb-gv-mQJ" id="QbP-88-cTj"/>
                                         </connections>
                                     </tableViewCell>
@@ -184,6 +187,7 @@
                     <navigationItem key="navigationItem" title="Search Ingredient" id="9Sb-yc-suT"/>
                     <connections>
                         <outlet property="searchBar" destination="5z2-zD-kmn" id="PQf-y6-Kfp"/>
+                        <outlet property="tableView" destination="3FR-4i-Opo" id="hiF-fT-AqN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4U-em-q1S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
