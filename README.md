@@ -97,11 +97,13 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 |  createdAt  |  Date  | Date that FoodItem was added to the table (automatic). |
 |  updatedAt  |  Date  | Latest date that the FoodItem info was updated (automatic). |
 |    userID   | Pointer to User | A reference pointer to a User in Users table that own the ingredient (required). |
+|    foodID   | Number | A unique ID used to identify the ingredient on the Spoonacular API (required). | 
 |  foodName   | String | Market name of the FoodItem, e.g. "potato" (required). |
 | compartment | String | Which compartment of the fridge the FoodItem is stored in, i.e. "fridge", "freezer", "drawer" (required). | 
 |    aisle    | String | Type of aisle ingredient belongs to in a grocery store, e.g. milk is in "dairy" aisle (required). |
 |   quantity  | Number | Amount of the FoodItem the user stored (required). | 
 |     unit    | String | Unit of measurement for the quantity of the FoodItem (required). |
+| possibleUnts | Array | A list of possible units for this ingredient the user can choose from (not required). | 
 
 ### Networking
 #### List of network requests by screen
