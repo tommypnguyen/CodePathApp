@@ -8,6 +8,7 @@
 
 import Alamofire
 import AlamofireImage
+import Parse
 import SwiftyJSON
 import UIKit
 
@@ -85,7 +86,49 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     }
     
     
-    // MARK: - Network Requests
+    // MARK: - Actions
+    @IBAction func onDone(_ sender: Any) {
+        // loop through each ingredient in ingredientsList, and save each one
+        // to the database
+        for ingredient in ingredientsList {
+            
+        }
+    }
+    
+    
+    // MARK: - Parse Database
+    func saveIngredient(_ ingredient: Ingredient) {
+        // Get table on parse to save foods in
+        let food = PFObject(className: FoodDB.className.rawValue)
+        
+        food[FoodDB.user.rawValue]          = PFUser.current()!
+        food[FoodDB.foodID.rawValue]        = ingredient.id
+        food[FoodDB.foodName.rawValue]      = ingredient.name
+        food[FoodDB.compartment.rawValue]   = ingredient.compartment
+        food[FoodDB.aisle.rawValue]         = ingredient.aisle
+        food[FoodDB.quantity.rawValue]      = ingredient.amount
+        food[FoodDB.unit.rawValue]          = ingredient.unit
+        food[FoodDB.possibleUnits.rawValue] = ingredient.possibleUnits
+        
+        // save image
+//        let imageData = photoImageView.image!.pngData()
+//        let file      = PFFileObject(name: "image.png", data: imageData!)
+//        post[PostsDB.image.rawValue] = file
+        
+//        post.saveInBackground { (success, error) in
+//            if success {
+//                print("Post successfully shared!")
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//            else {
+//                print("Error sharing post")
+//                self.displayShareError(error: error!)
+//            }
+//        }
+    }
+    
+    
+    // MARK: - Spoonacular Network Requests
     func parseIngredientsRequest() {
         var url = SpoonacularAPI.baseURL.rawValue + SpoonacularAPI.parseIngredient.rawValue
         url += "?apiKey=\(SpoonacularAPI.richAPIKey.rawValue)"
@@ -113,6 +156,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     
     // MARK: - Data Parsing
     func parseIngredient(from data: JSON) {
+        // data passed in is a list of length 1
         let data = data[0]
         
         let id     = data["id"].intValue
@@ -124,7 +168,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         let posUnits = data["possibleUnits"].arrayValue.map { $0.stringValue }
         let estCosts = data["estimatedCost"].dictionaryValue
         
-        let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, possibleUnits: posUnits, cost: estCosts)
+        let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, compartment: "Fridge", possibleUnits: posUnits)
         
         ingredientsList.append(ingredient)
     }

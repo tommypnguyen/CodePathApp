@@ -112,17 +112,18 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLJ-3c-NdG" userLabel="Add Button">
                                 <rect key="frame" x="157" y="802" width="100" height="34"/>
-                                <color key="backgroundColor" name="Light Pink"/>
+                                <color key="backgroundColor" name="Dark Pink"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="KGp-sg-Mqx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="tintColor" name="Dark Pink"/>
+                                <color key="tintColor" name="Light Pink"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButton:" destination="d8G-yf-aAj" eventType="touchUpInside" id="hsj-8n-BvV"/>
+                                    <action selector="onDone:" destination="PQE-sd-9Kn" eventType="touchUpInside" id="1Gn-z6-g7I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GU-dz-Dxo" userLabel="Scan Button">

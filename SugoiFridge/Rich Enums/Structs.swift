@@ -15,6 +15,7 @@ struct Ingredient {
     let unit   : String
     let amount : Double
     let aisle  : String
+    let cost   : [String : Any]
+    let compartment   : String
     let possibleUnits : [String]
-    let cost : [String : Any]
 }

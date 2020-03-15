@@ -12,6 +12,19 @@ enum CustomUI : Int {
     case cornerRadius = 5
 }
 
+enum FoodDB : String {
+    case className = "Food"
+    case user = "userID"
+    case foodID
+    case foodName
+    case compartment
+    case aisle
+    case quantity
+    case unit
+    case possibleUnits
+    case imageName
+}
+
 enum ImageSize : String {
     case small  = "100x100"
     case medium = "250x250"
