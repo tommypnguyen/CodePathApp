@@ -8,6 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Fridge-->
+        <scene sceneID="H0d-8d-iu4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Fridge" id="Tp2-xb-uoQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbF-xP-D89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718" y="301"/>
+        </scene>
         <!--Add Ingredients-->
         <scene sceneID="Rad-yv-SJk">
             <objects>
@@ -158,7 +166,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ua0-sL-60X"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Ingredients" id="7h5-BC-JiN"/>
+                    <navigationItem key="navigationItem" title="Add Ingredients" id="7h5-BC-JiN">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="sL9-53-Axw">
+                            <connections>
+                                <segue destination="Tp2-xb-uoQ" kind="presentation" modalPresentationStyle="fullScreen" id="Xww-xv-kj7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="doneButton" destination="xLJ-3c-NdG" id="vj2-oK-4g1"/>
                         <outlet property="searchBar" destination="zNx-Sl-7Z6" id="Rb7-m4-Ww7"/>
@@ -169,86 +183,6 @@
                 <exit id="d8G-yf-aAj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1717.3913043478262" y="-139.28571428571428"/>
-        </scene>
-        <!--Search Ingredient-->
-        <scene sceneID="1ss-e8-OwZ">
-            <objects>
-                <viewController id="0dE-ah-nRP" customClass="SearchIngredientViewController" customModule="SugoiFridge" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QC0-Ak-UIE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Ingredient" translatesAutoresizingMaskIntoConstraints="NO" id="5z2-zD-kmn">
-                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" estimatedRowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3FR-4i-Opo">
-                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewIngredientTableViewCell" rowHeight="96" id="ZID-sn-D3L" customClass="NewIngredientTableViewCell" customModule="SugoiFridge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZID-sn-D3L" id="5Jb-td-XLG">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unb-gv-mQJ">
-                                                    <rect key="frame" x="112" y="39.5" width="282" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6h3-lX-q5M">
-                                                    <rect key="frame" x="24" y="8" width="80" height="80"/>
-                                                    <color key="backgroundColor" name="Dark Pink"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="6h3-lX-q5M" secondAttribute="height" multiplier="1:1" id="A8W-NN-fBP"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Unb-gv-mQJ" firstAttribute="leading" secondItem="6h3-lX-q5M" secondAttribute="trailing" constant="8" id="0MS-UH-fzR"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Unb-gv-mQJ" secondAttribute="trailing" id="Yq1-cd-bly"/>
-                                                <constraint firstItem="6h3-lX-q5M" firstAttribute="leading" secondItem="5Jb-td-XLG" secondAttribute="leading" constant="24" id="ZAV-wb-X1I"/>
-                                                <constraint firstItem="Unb-gv-mQJ" firstAttribute="centerY" secondItem="5Jb-td-XLG" secondAttribute="centerY" id="kyp-Pm-8zs"/>
-                                                <constraint firstAttribute="bottom" secondItem="6h3-lX-q5M" secondAttribute="bottom" constant="8" id="nQY-xO-NKj"/>
-                                                <constraint firstItem="6h3-lX-q5M" firstAttribute="top" secondItem="5Jb-td-XLG" secondAttribute="top" constant="8" id="pdj-Kl-tzE"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="ingredientImage" destination="6h3-lX-q5M" id="ivp-sb-3a0"/>
-                                            <outlet property="nameLabel" destination="Unb-gv-mQJ" id="QbP-88-cTj"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="3FR-4i-Opo" firstAttribute="top" secondItem="5z2-zD-kmn" secondAttribute="bottom" symbolic="YES" id="7wR-bo-4MD"/>
-                            <constraint firstItem="CmH-xf-mdu" firstAttribute="trailing" secondItem="3FR-4i-Opo" secondAttribute="trailing" id="PIt-1q-iOd"/>
-                            <constraint firstItem="5z2-zD-kmn" firstAttribute="trailing" secondItem="CmH-xf-mdu" secondAttribute="trailing" id="Qrg-Co-foO"/>
-                            <constraint firstItem="CmH-xf-mdu" firstAttribute="bottom" secondItem="3FR-4i-Opo" secondAttribute="bottom" id="RGd-GA-ZhC"/>
-                            <constraint firstItem="5z2-zD-kmn" firstAttribute="leading" secondItem="CmH-xf-mdu" secondAttribute="leading" id="fZM-4z-12W"/>
-                            <constraint firstItem="3FR-4i-Opo" firstAttribute="leading" secondItem="CmH-xf-mdu" secondAttribute="leading" id="gtw-2g-WDc"/>
-                            <constraint firstItem="5z2-zD-kmn" firstAttribute="top" secondItem="CmH-xf-mdu" secondAttribute="top" id="o1q-Gz-NcW"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="CmH-xf-mdu"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Search Ingredient" id="9Sb-yc-suT"/>
-                    <connections>
-                        <outlet property="searchBar" destination="5z2-zD-kmn" id="PQf-y6-Kfp"/>
-                        <outlet property="tableView" destination="3FR-4i-Opo" id="hiF-fT-AqN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W4U-em-q1S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2800" y="-139.28571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ext-Sg-8yb">
