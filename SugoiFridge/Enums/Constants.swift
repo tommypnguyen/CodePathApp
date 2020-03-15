@@ -12,6 +12,11 @@ enum CustomUI : Int {
     case cornerRadius = 5
 }
 
+enum ErrorMessages : String {
+    case searchTitle = "Input Error"
+    case emptySearchMsg = "The ingredient name cannot be empty."
+}
+
 enum FoodDB : String {
     case className = "Food"
     case user = "userID"

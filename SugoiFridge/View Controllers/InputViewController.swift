@@ -73,9 +73,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // Check if search bar is empty
         if searchBar.text == "" {
-            print("Search cannot be empty")
-            
-            // TODO: display dialogue box
+            displayAlert(with: ErrorMessages.searchTitle.rawValue, and: ErrorMessages.emptySearchMsg.rawValue)
         }
         else {
             parseIngredientsRequest()
@@ -119,7 +117,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                 print("Ingredient \(ingredient.name) saved successfully to parse")
             }
             else {
-                print("Error when saving \(ingredient.name) to Parse:\n \(error)")
+                print("Error when saving \(ingredient.name) to Parse:\n \(String(describing: error))")
             }
         }
     }
@@ -194,5 +192,17 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                     self.tableView.reloadData()
             }
         }
+    }
+    
+    
+    // MARK: - Display Error
+    func displayAlert(with title: String, and message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        // create and add an OK action to alert controller
+        let OKAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(OKAction)
+        
+        present(alertController, animated: true)
     }
 }
