@@ -13,7 +13,8 @@ enum CustomUI : Int {
 }
 
 enum ErrorMessages : String {
-    case searchTitle = "Input Error"
+    case generalTitle = "Error"
+    case searchTitle = "Ingredient Error"
     case emptySearchMsg = "The ingredient name cannot be empty."
 }
 

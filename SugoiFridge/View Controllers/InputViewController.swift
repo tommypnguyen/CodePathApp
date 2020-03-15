@@ -63,6 +63,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         cell.amountLabel.text = String(format: "%.1f", ingredient.amount)
         cell.unitLabel.text   = ingredient.unit
         cell.drawerLabel.text = ingredient.aisle
+        cell.compartmentLabel.text = ingredient.compartment
         cell.ingredientImage.image = ingredient.image
 
         return cell
@@ -73,7 +74,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // Check if search bar is empty
         if searchBar.text == "" {
-            displayAlert(with: ErrorMessages.searchTitle.rawValue, and: ErrorMessages.emptySearchMsg.rawValue)
+            displayAlert(withTitle: ErrorMessages.searchTitle.rawValue, andMsg: ErrorMessages.emptySearchMsg.rawValue)
         }
         else {
             parseIngredientsRequest()
@@ -114,10 +115,11 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         // Save new food ingredient parse object onto the database
         food.saveInBackground { (success, error) in
             if success {
-                print("Ingredient \(ingredient.name) saved successfully to parse")
+                print("Ingredient \(ingredient.name) saved successfully to parse\n")
             }
             else {
-                print("Error when saving \(ingredient.name) to Parse:\n \(String(describing: error))")
+                print("Error when saving \(ingredient.name) to Parse:\n")
+                self.displayAlert(withTitle: ErrorMessages.generalTitle.rawValue, andMsg: error!.localizedDescription)
             }
         }
     }
@@ -135,7 +137,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
             .validate().responseJSON { response in
                 switch response.result {
                     case .success(let value):
-                        print("Spoonacular API request success")
+                        print("Spoonacular API request successful\n")
                         
                         let jsonData = JSON(value)
                         self.parseIngredient(from: jsonData)
@@ -143,7 +145,8 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                         self.tableView.reloadData()
                         
                     case .failure(let error):
-                        print("Spoonacular API request failed with error: \(error)")
+                        print("Spoonacular API request failed\n")
+                        self.displayAlert(withTitle: ErrorMessages.searchTitle.rawValue, andMsg: error.localizedDescription)
                 }
         }
     }
@@ -173,9 +176,9 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                 // If download image is successful, add the image to the
                 // the ingredients list to be displayed
                 case .success(let image):
-                    print("Obtained ingredient image successfully")
+                    print("Obtained \"\(name)\" image successfully\n")
                     // Add ingredient to list
-                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, compartment: "Fridge", possibleUnits: posUnits)
+                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
                     
                     self.ingredientsList.append(ingredient)
                     self.tableView.reloadData()
@@ -183,10 +186,10 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                 // If download image failed, add an empty image to the
                 // ingredients list
                 case .failure( _):
-                    print("Failed to obtain ingredient image")
+                    print("Failed to obtain \"\(name)\" image\n")
                     let image = UIImage()
                 
-                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, compartment: "Fridge", possibleUnits: posUnits)
+                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
                     
                     self.ingredientsList.append(ingredient)
                     self.tableView.reloadData()
@@ -196,7 +199,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     
     
     // MARK: - Display Error
-    func displayAlert(with title: String, and message: String) {
+    func displayAlert(withTitle title: String, andMsg message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         // create and add an OK action to alert controller
