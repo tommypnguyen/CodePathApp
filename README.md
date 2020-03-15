@@ -82,17 +82,71 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
   * -> Ingredients Screen
 
 ## Wireframes
+<img src="https://imgur.com/Lszpqqv.png" width=600>
+
+### Digital Wireframes & Mockups
 <img src="https://i.imgur.com/tOGrKi5.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+#### FoodItem
+|   Property    |      Type     |  Description |
+| ------------- | ------------- | ------------- |
+|  objectID   | String | Unique ID of each FoodItem (required). |
+|  createdAt  |  Date  | Date that FoodItem was added to the table (automatic). |
+|  updatedAt  |  Date  | Latest date that the FoodItem info was updated (automatic). |
+|    userID   | Pointer to User | A reference pointer to a User in Users table that own the ingredient (required). |
+|    foodID   | Number | A unique ID used to identify the ingredient on the Spoonacular API (required). | 
+|  foodName   | String | Market name of the FoodItem, e.g. "potato" (required). |
+|    image    |  File  | A .jpg filfe of the ingredient as a picture (required). | 
+| compartment | String | Which compartment of the fridge the FoodItem is stored in, i.e. "fridge", "freezer", "drawer" (required). | 
+|    aisle    | String | Type of aisle ingredient belongs to in a grocery store, e.g. milk is in "dairy" aisle (required). |
+|   quantity  | Number | Amount of the FoodItem the user stored (required). | 
+|     unit    | String | Unit of measurement for the quantity of the FoodItem (required). |
+| possibleUnts | Array | A list of possible units for this ingredient the user can choose from (not required). | 
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+#### List of network requests by screen
+* Ingredients Screen  
+   * (Read/GET) Obtain list of a User's ingredients
+   ```
+   let query = PFQuery(className: "FoodItem")
+   query.whereKey("userID", equalTo: currentUser)
+   query.order(byAscending: "compartment")
+   query.addAscendingOrder("aisle")
+   query.addAscendingOrder("foodName")
+   
+   query.findObjectsInBackground { (ingredients: [PFObject]?, error: Error?) in 
+      if let error = error {
+         print(error.localizedDescription)
+      } else if let posts = posts {
+         print("Successfully retrieved ingredients in user's fridge.")
+         // TODO: display ingredients 
+      }
+   }
+   ```
+* Scanning Screen
+   * (Create/POST) Add ingredient(s) to a User's fridge
+* Fridge Screen
+   * (Update/PUT) Change existing ingredient(s) information in the database, e.g. its quantity
+   * (Delete) Delete a ingredient(s) in a User's fridge
+
+#### Existing API Endpoints
+##### TabScanner
+- Base URL: https://api.tabscanner.com/api
+
+|   HTTP Verb   |    Endpoint   |  Description |
+| ------------- | ------------- | ------------- |
+|     POST      | /2/process?file=file | Submit an image of a receipt to be processed, returns a token representing the processed text from the receipt. |
+|      GET      | /result/{token} | Retrieve processed text from a receipt based on a unique token. |
+
+##### Spoonacular
+- Base URL: https://api.spoonacular.com/
+
+|   HTTP Verb   |    Endpoint   |  Description |
+| ------------- | ------------- | -------------|
+|  GET   | recipes/findByIngredients | Find a list of recipes based on ingredients passed in |
+|  GET     | recipes/{id}/information       | Get specific information about selected recipe     |
+|  GET      | recipes/{id}/analyzedInstructions       | Get recipe steps for specific recipe     |
+|      GET      | /food/ingredients/{id}/information | Get basic information about a particular ingredient, e.g. name, price, unit... etc. |
