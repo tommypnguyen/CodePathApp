@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c07-Kz-ABE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c07-Kz-ABE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -119,6 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="Evd-yo-Zje"/>
                     </view>
                     <navigationItem key="navigationItem" title="Food" id="bz3-Ki-aRE">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="68n-TH-M1b">
+                            <connections>
+                                <action selector="logout:" destination="BQx-xH-i1y" id="kmS-6k-Adf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="z7U-bw-6x9">
                             <connections>
                                 <segue destination="nZv-9j-3MU" kind="presentation" modalPresentationStyle="fullScreen" id="39v-D2-1yu"/>
@@ -154,7 +159,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="rdL-Aw-gxg">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c07-Kz-ABE" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="FridgeTabController" automaticallyAdjustsScrollViewInsets="NO" id="c07-Kz-ABE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9hy-fg-Fqi">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -173,7 +178,7 @@
         <!--Item-->
         <scene sceneID="pmx-Pl-rkE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hcs-Ux-SYJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FridgeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Hcs-Ux-SYJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" image="rosette" catalog="system" id="bsh-qm-59r"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kd4-Uq-jZJ">
