@@ -19,6 +19,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    let downloader = ImageDownloader()
     var ingredientsList: [Ingredient] = []
     
     
@@ -62,10 +63,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         cell.amountLabel.text = String(format: "%.1f", ingredient.amount)
         cell.unitLabel.text   = ingredient.unit
         cell.drawerLabel.text = ingredient.aisle
-        
-        let urlString = SpoonacularAPI.image.rawValue + ImageSize.small.rawValue + "/" + ingredient.image
-        let url = URL(string: urlString)!
-        cell.ingredientImage.af.setImage(withURL: url)
+        cell.ingredientImage.image = ingredient.image
 
         return cell
     }
@@ -91,7 +89,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         // loop through each ingredient in ingredientsList, and save each one
         // to the database
         for ingredient in ingredientsList {
-            
+            saveIngredient(ingredient)
         }
     }
     
@@ -110,21 +108,20 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         food[FoodDB.unit.rawValue]          = ingredient.unit
         food[FoodDB.possibleUnits.rawValue] = ingredient.possibleUnits
         
-        // save image
-//        let imageData = photoImageView.image!.pngData()
-//        let file      = PFFileObject(name: "image.png", data: imageData!)
-//        post[PostsDB.image.rawValue] = file
+        // Load image into Parse Object
+        let imageData = ingredient.image.pngData()
+        let file      = PFFileObject(name: "image.png", data: imageData!)
+        food[FoodDB.image.rawValue] = file
         
-//        post.saveInBackground { (success, error) in
-//            if success {
-//                print("Post successfully shared!")
-//                self.navigationController?.popViewController(animated: true)
-//            }
-//            else {
-//                print("Error sharing post")
-//                self.displayShareError(error: error!)
-//            }
-//        }
+        // Save new food ingredient parse object onto the database
+        food.saveInBackground { (success, error) in
+            if success {
+                print("Ingredient \(ingredient.name) saved successfully to parse")
+            }
+            else {
+                print("Error when saving \(ingredient.name) to Parse:\n \(error)")
+            }
+        }
     }
     
     
@@ -161,15 +158,41 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         
         let id     = data["id"].intValue
         let name   = data["name"].stringValue
-        let image  = data["image"].stringValue
         let unit   = data["unitShort"].stringValue
         let amount = data["amount"].doubleValue
         let aisle  = data["aisle"].stringValue
         let posUnits = data["possibleUnits"].arrayValue.map { $0.stringValue }
         let estCosts = data["estimatedCost"].dictionaryValue
         
-        let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, compartment: "Fridge", possibleUnits: posUnits)
-        
-        ingredientsList.append(ingredient)
+        // Download ingredient image
+        let imageString  = data["image"].stringValue
+        let urlString = SpoonacularAPI.image.rawValue + ImageSize.small.rawValue + "/" + imageString
+        let url = URL(string: urlString)!
+        let urlRequest = URLRequest(url: url)
+
+        downloader.download(urlRequest) { response in
+            switch response.result {
+                // If download image is successful, add the image to the
+                // the ingredients list to be displayed
+                case .success(let image):
+                    print("Obtained ingredient image successfully")
+                    // Add ingredient to list
+                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, compartment: "Fridge", possibleUnits: posUnits)
+                    
+                    self.ingredientsList.append(ingredient)
+                    self.tableView.reloadData()
+                
+                // If download image failed, add an empty image to the
+                // ingredients list
+                case .failure( _):
+                    print("Failed to obtain ingredient image")
+                    let image = UIImage()
+                
+                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, compartment: "Fridge", possibleUnits: posUnits)
+                    
+                    self.ingredientsList.append(ingredient)
+                    self.tableView.reloadData()
+            }
+        }
     }
 }

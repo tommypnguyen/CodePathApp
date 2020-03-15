@@ -6,12 +6,13 @@
 //  Copyright © 2020 TAR. All rights reserved.
 //
 
+import UIKit
 import Foundation
 
 struct Ingredient {
     let id     : Int
     let name   : String
-    let image  : String
+    let image  : UIImage
     let unit   : String
     let amount : Double
     let aisle  : String
