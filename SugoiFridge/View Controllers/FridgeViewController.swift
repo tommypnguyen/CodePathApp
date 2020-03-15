@@ -37,6 +37,26 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        /*
+         override func viewDidAppear(_ animated: Bool) {
+             super.viewDidAppear(animated)
+             
+             let query = PFQuery(className: "Posts")
+             query.includeKeys(["author", "comments", "comments.author"])
+             query.limit = 20
+             
+             query.findObjectsInBackground { (posts, error) in
+                 if posts != nil {
+                     self.posts = posts!
+                     self.tableView.reloadData()
+                 }
+             }
+         }
+         */
+    }
+    
     //TableView
     
 

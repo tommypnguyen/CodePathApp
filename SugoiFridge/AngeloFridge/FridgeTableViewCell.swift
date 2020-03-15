@@ -37,6 +37,8 @@ extension FridgeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = foodCollection.dequeueReusableCell(withReuseIdentifier: "FridgeFoodCell", for: indexPath)
         
+        
+        
         return cell
     }
     
