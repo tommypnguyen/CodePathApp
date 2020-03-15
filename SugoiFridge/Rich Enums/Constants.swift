@@ -12,6 +12,12 @@ enum CustomUI : Int {
     case cornerRadius = 5
 }
 
+enum ImageSize : String {
+    case small  = "100x100"
+    case medium = "250x250"
+    case large  = "500x500"
+}
+
 enum ReuseIdentifiers : String {
     case inputTableView = "IngredientTableViewCell"
     case newIngTableView = "NewIngredientTableViewCell"
@@ -22,4 +28,5 @@ enum SpoonacularAPI : String {
     case baseURL = "https://api.spoonacular.com"
     case autocomplete = "/food/ingredients/autocomplete"
     case parseIngredient = "/recipes/parseIngredients"
+    case image = "https://spoonacular.com/cdn/ingredients_"
 }

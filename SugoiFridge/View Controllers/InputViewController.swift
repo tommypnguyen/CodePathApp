@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import AlamofireImage
 import SwiftyJSON
 import UIKit
 
@@ -52,11 +53,6 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell()
-//
-//        cell.textLabel!.text = "Tomatoes"
-//
-//        return cell
         let cell = tableView.dequeueReusableCell(withIdentifier: ReuseIdentifiers.inputTableView.rawValue) as! IngredientTableViewCell
         
         let ingredient = ingredientsList[indexPath.row]
@@ -65,6 +61,10 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         cell.amountLabel.text = String(format: "%.1f", ingredient.amount)
         cell.unitLabel.text   = ingredient.unit
         cell.drawerLabel.text = ingredient.aisle
+        
+        let urlString = SpoonacularAPI.image.rawValue + ImageSize.small.rawValue + "/" + ingredient.image
+        let url = URL(string: urlString)!
+        cell.ingredientImage.af.setImage(withURL: url)
 
         return cell
     }

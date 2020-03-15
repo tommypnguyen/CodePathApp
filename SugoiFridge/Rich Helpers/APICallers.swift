@@ -10,5 +10,20 @@ import Alamofire
 import Foundation
 
 class APICaller {
+    static let client = APICaller()
     
+    func getImage(of size: ImageSize, for ingredient: String) {
+        let url = "\(SpoonacularAPI.image.rawValue)\(size.rawValue)" + "/" + ingredient
+        
+        
+        AF.request(url).validate().responseJSON { response in
+                switch response.result {
+                    case .success(let value):
+                        print("Obtained image from Spoonacular")
+                        print(value)
+                    case .failure(let error):
+                        print("Obtaining image from Spoonacular failed with error: \(error)")
+                }
+        }
+    }
 }

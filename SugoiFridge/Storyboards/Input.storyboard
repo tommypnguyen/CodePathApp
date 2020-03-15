@@ -29,7 +29,6 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gmG-AN-phO">
                                                     <rect key="frame" x="16" y="8" width="95" height="95"/>
-                                                    <color key="backgroundColor" name="Dark Pink"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="gmG-AN-phO" secondAttribute="height" multiplier="1:1" id="pYD-xZ-HIX"/>
                                                     </constraints>
@@ -103,7 +102,7 @@
                                         <connections>
                                             <outlet property="amountLabel" destination="nGY-Fx-fB7" id="GQa-t6-IcB"/>
                                             <outlet property="compartmentLabel" destination="WFI-bg-vh7" id="zie-OF-rWH"/>
-                                            <outlet property="drawerLabel" destination="rEm-Db-gWy" id="w2K-6m-qdu"/>
+                                            <outlet property="drawerLabel" destination="HWm-Oa-Tzt" id="zuy-9j-oMq"/>
                                             <outlet property="ingredientImage" destination="gmG-AN-phO" id="p7v-vc-jEX"/>
                                             <outlet property="ingredientNameLabel" destination="EKq-eI-Abj" id="0ur-QE-I84"/>
                                             <outlet property="unitLabel" destination="vlP-uK-100" id="FO7-jy-m2c"/>
