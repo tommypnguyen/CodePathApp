@@ -80,6 +80,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         }
         else {
             parseIngredientsRequest()
+            searchBar.text = ""
         }
     }
     
