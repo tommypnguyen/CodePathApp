@@ -12,6 +12,12 @@ enum CustomUI : Int {
     case cornerRadius = 5
 }
 
+enum ErrorMessages : String {
+    case generalTitle = "Error"
+    case searchTitle = "Ingredient Error"
+    case emptySearchMsg = "The ingredient name cannot be empty."
+}
+
 enum FoodDB : String {
     case className = "Food"
     case user = "userID"
@@ -22,7 +28,7 @@ enum FoodDB : String {
     case quantity
     case unit
     case possibleUnits
-    case imageName
+    case image
 }
 
 enum ImageSize : String {
@@ -34,6 +40,10 @@ enum ImageSize : String {
 enum ReuseIdentifiers : String {
     case inputTableView = "IngredientTableViewCell"
     case newIngTableView = "NewIngredientTableViewCell"
+}
+
+enum SegueIdentifiers : String {
+    case fridgeSegue
 }
 
 enum SpoonacularAPI : String {
