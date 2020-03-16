@@ -99,7 +99,8 @@ Ever open your refridgerator and wonder what you can make? **SugoiFridge** can h
 |    userID   | Pointer to User | A reference pointer to a User in Users table that own the ingredient (required). |
 |    foodID   | Number | A unique ID used to identify the ingredient on the Spoonacular API (required). | 
 |  foodName   | String | Market name of the FoodItem, e.g. "potato" (required). |
-|    image    |  File  | A .jpg filfe of the ingredient as a picture (required). | 
+|    image    |  File  | A .jpg file of the ingredient as a picture (required). | 
+|  imageName  | String | A string name that can be used to get an image from Spoonacular API (required). | 
 | compartment | String | Which compartment of the fridge the FoodItem is stored in, i.e. "fridge", "freezer", "drawer" (required). | 
 |    aisle    | String | Type of aisle ingredient belongs to in a grocery store, e.g. milk is in "dairy" aisle (required). |
 |   quantity  | Number | Amount of the FoodItem the user stored (required). | 
