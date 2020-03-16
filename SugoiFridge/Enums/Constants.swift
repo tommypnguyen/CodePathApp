@@ -29,6 +29,7 @@ enum FoodDB : String {
     case unit
     case possibleUnits
     case image
+    case imageName
 }
 
 enum ImageSize : String {

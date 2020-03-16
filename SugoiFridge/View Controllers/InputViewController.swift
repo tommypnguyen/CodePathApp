@@ -131,6 +131,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         food[FoodDB.quantity.rawValue]      = ingredient.amount
         food[FoodDB.unit.rawValue]          = ingredient.unit
         food[FoodDB.possibleUnits.rawValue] = ingredient.possibleUnits
+        food[FoodDB.imageName.rawValue]     = ingredient.imageName
         
         // Load image into Parse Object
         let imageData = ingredient.image.pngData()
@@ -203,7 +204,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                 case .success(let image):
                     print("Obtained \"\(name)\" image successfully\n")
                     // Add ingredient to list
-                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
+                    let ingredient = Ingredient(id: id, name: name, image: image, imageName: imageString, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
                     
                     self.ingredientsList.append(ingredient)
                     self.tableView.reloadData()
@@ -214,7 +215,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                     print("Failed to obtain \"\(name)\" image\n")
                     let image = UIImage()
                 
-                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
+                    let ingredient = Ingredient(id: id, name: name, image: image, imageName: imageString, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
                     
                     self.ingredientsList.append(ingredient)
                     self.tableView.reloadData()
