@@ -90,6 +90,8 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         for ingredient in ingredientsList {
             saveIngredient(ingredient)
         }
+        
+        performSegue(withIdentifier: SegueIdentifiers.fridgeSegue.rawValue, sender: nil)
     }
     
     
@@ -118,8 +120,8 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                 print("Ingredient \(ingredient.name) saved successfully to parse\n")
             }
             else {
-                print("Error when saving \(ingredient.name) to Parse:\n")
-                self.displayAlert(withTitle: ErrorMessages.generalTitle.rawValue, andMsg: error!.localizedDescription)
+                print("Error when saving \(ingredient.name) to Parse:\n\(error!.localizedDescription)")
+                self.displayAlert(withTitle: ErrorMessages.generalTitle.rawValue, andMsg: "Error when saving \(ingredient.name) to server! Please try again later.")
             }
         }
     }

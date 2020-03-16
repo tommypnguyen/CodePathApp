@@ -42,6 +42,10 @@ enum ReuseIdentifiers : String {
     case newIngTableView = "NewIngredientTableViewCell"
 }
 
+enum SegueIdentifiers : String {
+    case fridgeSegue
+}
+
 enum SpoonacularAPI : String {
     case richAPIKey = "4a920a238fce46328d701af0ece929cf"
     case baseURL = "https://api.spoonacular.com"
