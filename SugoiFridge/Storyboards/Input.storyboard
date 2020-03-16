@@ -48,13 +48,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGY-Fx-fB7" userLabel="Amount Label">
-                                                    <rect key="frame" x="353" y="16" width="8" height="21"/>
+                                                    <rect key="frame" x="340.5" y="16" width="8" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="unit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlP-uK-100" userLabel="Unit Label">
-                                                    <rect key="frame" x="369" y="16" width="29" height="21"/>
+                                                    <rect key="frame" x="356.5" y="16" width="29" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fridge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFI-bg-vh7" userLabel="Compartment Label">
-                                                    <rect key="frame" x="229" y="53" width="169" height="17"/>
+                                                    <rect key="frame" x="229" y="53" width="156.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -78,17 +78,23 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aisle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWm-Oa-Tzt" userLabel="Drawer Label">
-                                                    <rect key="frame" x="229" y="78" width="169" height="17"/>
+                                                    <rect key="frame" x="229" y="78" width="156.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RWv-tl-bsL">
+                                                    <rect key="frame" x="393.5" y="47.5" width="12.5" height="16.5"/>
+                                                    <color key="tintColor" name="Light Pink"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="vlP-uK-100" firstAttribute="trailing" secondItem="WFI-bg-vh7" secondAttribute="trailing" id="1z1-pT-vQX"/>
+                                                <constraint firstAttribute="trailing" secondItem="RWv-tl-bsL" secondAttribute="trailing" constant="8" id="7kp-UD-ISs"/>
                                                 <constraint firstItem="vlP-uK-100" firstAttribute="centerY" secondItem="nGY-Fx-fB7" secondAttribute="centerY" id="91u-BN-Z6f"/>
-                                                <constraint firstItem="HWm-Oa-Tzt" firstAttribute="trailing" secondItem="WFI-bg-vh7" secondAttribute="trailing" id="B9s-Ca-rYe"/>
                                                 <constraint firstItem="WFI-bg-vh7" firstAttribute="centerY" secondItem="ILG-8J-Emm" secondAttribute="centerY" id="BS9-ez-8T9"/>
                                                 <constraint firstItem="ILG-8J-Emm" firstAttribute="top" secondItem="EKq-eI-Abj" secondAttribute="bottom" constant="16" id="HbO-kk-FvT"/>
+                                                <constraint firstItem="RWv-tl-bsL" firstAttribute="leading" secondItem="WFI-bg-vh7" secondAttribute="trailing" constant="8" id="JV5-yP-YmB"/>
                                                 <constraint firstItem="EKq-eI-Abj" firstAttribute="top" secondItem="ocE-tB-Sup" secondAttribute="top" constant="16" id="KMy-AS-Z5O"/>
                                                 <constraint firstItem="nGY-Fx-fB7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EKq-eI-Abj" secondAttribute="trailing" constant="16" id="Nfi-eK-qtc"/>
                                                 <constraint firstItem="rEm-Db-gWy" firstAttribute="leading" secondItem="ILG-8J-Emm" secondAttribute="leading" id="S7n-VX-lYM"/>
@@ -96,6 +102,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="gmG-AN-phO" secondAttribute="bottom" constant="8" id="UyM-Af-Jlc"/>
                                                 <constraint firstItem="EKq-eI-Abj" firstAttribute="leading" secondItem="gmG-AN-phO" secondAttribute="trailing" constant="16" id="V99-Xj-CeD"/>
                                                 <constraint firstItem="nGY-Fx-fB7" firstAttribute="centerY" secondItem="EKq-eI-Abj" secondAttribute="centerY" id="VeY-WB-OoR"/>
+                                                <constraint firstItem="HWm-Oa-Tzt" firstAttribute="trailing" secondItem="WFI-bg-vh7" secondAttribute="trailing" id="ZUk-Us-0fh"/>
                                                 <constraint firstItem="HWm-Oa-Tzt" firstAttribute="leading" secondItem="WFI-bg-vh7" secondAttribute="leading" id="ZkF-Go-6ug"/>
                                                 <constraint firstItem="ILG-8J-Emm" firstAttribute="leading" secondItem="EKq-eI-Abj" secondAttribute="leading" id="b4r-dB-ZZv"/>
                                                 <constraint firstItem="WFI-bg-vh7" firstAttribute="leading" secondItem="ILG-8J-Emm" secondAttribute="trailing" constant="8" id="buX-Nu-0uZ"/>
@@ -103,8 +110,8 @@
                                                 <constraint firstItem="gmG-AN-phO" firstAttribute="top" secondItem="ocE-tB-Sup" secondAttribute="top" constant="8" id="gow-sg-QQH"/>
                                                 <constraint firstItem="gmG-AN-phO" firstAttribute="leading" secondItem="ocE-tB-Sup" secondAttribute="leading" constant="16" id="kou-Ff-hdZ"/>
                                                 <constraint firstItem="vlP-uK-100" firstAttribute="trailing" secondItem="WFI-bg-vh7" secondAttribute="trailing" id="red-Lg-J6d"/>
-                                                <constraint firstAttribute="trailing" secondItem="vlP-uK-100" secondAttribute="trailing" constant="16" id="sRA-So-Car"/>
                                                 <constraint firstItem="HWm-Oa-Tzt" firstAttribute="centerY" secondItem="rEm-Db-gWy" secondAttribute="centerY" id="wY3-4n-IYP"/>
+                                                <constraint firstItem="RWv-tl-bsL" firstAttribute="centerY" secondItem="ocE-tB-Sup" secondAttribute="centerY" id="wfi-6e-Fdg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -177,12 +184,29 @@
                         <outlet property="doneButton" destination="xLJ-3c-NdG" id="vj2-oK-4g1"/>
                         <outlet property="searchBar" destination="zNx-Sl-7Z6" id="Rb7-m4-Ww7"/>
                         <outlet property="tableView" destination="f93-2M-wTn" id="RTr-NT-D5q"/>
+                        <segue destination="eZo-lf-mmH" kind="show" identifier="editSegue" id="eXg-mS-Kzu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaK-eN-mKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="d8G-yf-aAj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1717.3913043478262" y="-139.28571428571428"/>
+        </scene>
+        <!--Edit Ingredient-->
+        <scene sceneID="W8R-Oz-on5">
+            <objects>
+                <viewController id="eZo-lf-mmH" customClass="EditViewController" customModule="SugoiFridge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbT-eY-Fu8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dww-3P-fBZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Ingredient" id="Ihf-3A-5c8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yb-ld-dJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2781" y="-139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ext-Sg-8yb">
@@ -205,6 +229,7 @@
     </scenes>
     <resources>
         <image name="camera.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
         <namedColor name="Dark Pink">
             <color red="0.91764705882352937" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

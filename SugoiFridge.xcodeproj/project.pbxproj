@@ -23,8 +23,8 @@
 		D18E35A424144C6300441130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A324144C6300441130 /* Assets.xcassets */; };
 		D18E35B224144C6400441130 /* SugoiFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35B124144C6400441130 /* SugoiFridgeTests.swift */; };
 		D18E35BD24144C6400441130 /* SugoiFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */; };
+		D1E390D1241F085100113922 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E390D0241F085100113922 /* EditViewController.swift */; };
 		D1FCBC82241E2850000C31DB /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC80241E284F000C31DB /* InputViewController.swift */; };
-		D1FCBC83241E2850000C31DB /* SearchIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC81241E2850000C31DB /* SearchIngredientViewController.swift */; };
 		D1FCBC8E241E2899000C31DB /* APICallers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC87241E2898000C31DB /* APICallers.swift */; };
 		D1FCBC8F241E2899000C31DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC89241E2898000C31DB /* Constants.swift */; };
 		D1FCBC90241E2899000C31DB /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC8A241E2898000C31DB /* Structs.swift */; };
@@ -83,8 +83,8 @@
 		D18E35B824144C6400441130 /* SugoiFridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugoiFridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugoiFridgeUITests.swift; sourceTree = "<group>"; };
 		D18E35BE24144C6400441130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1E390D0241F085100113922 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D1FCBC80241E284F000C31DB /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
-		D1FCBC81241E2850000C31DB /* SearchIngredientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchIngredientViewController.swift; sourceTree = "<group>"; };
 		D1FCBC87241E2898000C31DB /* APICallers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICallers.swift; sourceTree = "<group>"; };
 		D1FCBC89241E2898000C31DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D1FCBC8A241E2898000C31DB /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
@@ -164,9 +164,9 @@
 		D106C35A24145524000B5396 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D1E390D0241F085100113922 /* EditViewController.swift */,
 				17536FE224147A51004FDBD5 /* FridgeViewController.swift */,
 				D1FCBC80241E284F000C31DB /* InputViewController.swift */,
-				D1FCBC81241E2850000C31DB /* SearchIngredientViewController.swift */,
 				D106C36024145E5B000B5396 /* TestViewController.swift */,
 				D1FCBC9F241E2DA4000C31DB /* RecipeCollectionViewController.swift */,
 				D1FCBCA0241E2DA4000C31DB /* RecipeDetailsViewController.swift */,
@@ -515,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E390D1241F085100113922 /* EditViewController.swift in Sources */,
 				D1FCBC9D241E2D91000C31DB /* RecipeLayout.swift in Sources */,
 				D1FCBCA2241E2DA4000C31DB /* RecipeDetailsViewController.swift in Sources */,
 				D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */,
@@ -529,7 +530,6 @@
 				D106C36124145E5B000B5396 /* TestViewController.swift in Sources */,
 				D1FCBC92241E2899000C31DB /* IngredientTableViewCell.swift in Sources */,
 				D1FCBC8F241E2899000C31DB /* Constants.swift in Sources */,
-				D1FCBC83241E2850000C31DB /* SearchIngredientViewController.swift in Sources */,
 				D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */,
 				D1FCBC8E241E2899000C31DB /* APICallers.swift in Sources */,
 				D1FCBC91241E2899000C31DB /* NewIngredientTableViewCell.swift in Sources */,

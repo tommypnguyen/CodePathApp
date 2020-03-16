@@ -21,6 +21,8 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     
     let downloader = ImageDownloader()
     var ingredientsList: [Ingredient] = []
+    var ingredientToEdit : Ingredient?
+    var indexToEdit : Int?
     
     
     // MARK: - Initialization
@@ -67,6 +69,27 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         cell.ingredientImage.image = ingredient.image
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Get the ingredient that needs to be passed to next scene
+        // and save it locally to be accessed later
+        ingredientToEdit = ingredientsList[indexPath.row]
+        indexToEdit      = indexPath.row
+        
+        performSegue(withIdentifier: SegueIdentifiers.editSegue.rawValue, sender: self)
+    }
+    
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == SegueIdentifiers.editSegue.rawValue) {
+            let destinationVC = segue.destination as! EditViewController
+            destinationVC.ingredient = ingredientToEdit
+            destinationVC.index = indexToEdit
+        }
     }
     
     

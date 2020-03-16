@@ -44,6 +44,7 @@ enum ReuseIdentifiers : String {
 
 enum SegueIdentifiers : String {
     case fridgeSegue
+    case editSegue
 }
 
 enum SpoonacularAPI : String {
