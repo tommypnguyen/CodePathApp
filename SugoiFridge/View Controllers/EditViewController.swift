@@ -8,11 +8,11 @@
 
 import UIKit
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+    
+    
     
     // MARK: - Properties
-    
-    
     @IBOutlet weak var ingredientImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var quantityField: UITextField!
@@ -29,6 +29,7 @@ class EditViewController: UIViewController {
         super.viewDidLoad()
         
         populateUI()
+        customizeTextFields()
     }
     
     func populateUI() {
@@ -44,5 +45,48 @@ class EditViewController: UIViewController {
         
         // Assign image to UIImageView
         ingredientImage.af.setImage(withURL: url)
+    }
+    
+    func customizeTextFields() {
+        unitField.addTarget(self, action: #selector(createPickerView), for: .editingDidBegin)
+    }
+    
+    
+    // MARK: - PickerView delegates
+    var countryList = ["Algeria", "Andorra", "Angola", "India", "Thailand"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return countryList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return countryList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        unitField.text = countryList[row]
+    }
+    
+    @objc func createPickerView() {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        unitField.inputView = pickerView
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(closePicker))
+        
+        toolBar.setItems([button], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        unitField.inputAccessoryView = toolBar
+    }
+    
+    @objc func closePicker() {
+          view.endEditing(true)
     }
 }
