@@ -13,6 +13,7 @@ struct Ingredient {
     let id     : Int
     let name   : String
     let image  : UIImage
+    let imageName : String
     let unit   : String
     let amount : Double
     let aisle  : String

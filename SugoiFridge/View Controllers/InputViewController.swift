@@ -12,7 +12,7 @@ import Parse
 import SwiftyJSON
 import UIKit
 
-class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
+class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, IngredientsDelegate {
 
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
@@ -21,6 +21,8 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     
     let downloader = ImageDownloader()
     var ingredientsList: [Ingredient] = []
+    var ingredientToEdit : Ingredient?
+    var indexToEdit : Int?
     
     
     // MARK: - Initialization
@@ -69,12 +71,42 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Get the ingredient that needs to be passed to next scene
+        // and save it locally to be accessed later
+        ingredientToEdit = ingredientsList[indexPath.row]
+        indexToEdit      = indexPath.row
+        
+        performSegue(withIdentifier: SegueIdentifiers.editSegue.rawValue, sender: self)
+    }
+    
+    
+    // MARK: - Ingredients Delegate
+    func updateIngredient(with newIngredient: Ingredient, at index: Int) {
+        ingredientsList[index] = newIngredient
+        tableView.reloadData()
+    }
+    
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == SegueIdentifiers.editSegue.rawValue) {
+            let destinationVC = segue.destination as! EditViewController
+            
+            destinationVC.delegate   = self
+            destinationVC.ingredient = ingredientToEdit
+            destinationVC.index      = indexToEdit
+        }
+    }
+    
     
     // MARK: - Search Bar Functions
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // Check if search bar is empty
         if searchBar.text == "" {
-            displayAlert(withTitle: ErrorMessages.searchTitle.rawValue, andMsg: ErrorMessages.emptySearchMsg.rawValue)
+            AlertControl.control.displayAlert(inVC: self, withTitle: ErrorMessages.searchTitle.rawValue, andMsg: ErrorMessages.emptySearchMsg.rawValue)
         }
         else {
             parseIngredientsRequest()
@@ -108,6 +140,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         food[FoodDB.quantity.rawValue]      = ingredient.amount
         food[FoodDB.unit.rawValue]          = ingredient.unit
         food[FoodDB.possibleUnits.rawValue] = ingredient.possibleUnits
+        food[FoodDB.imageName.rawValue]     = ingredient.imageName
         
         // Load image into Parse Object
         let imageData = ingredient.image.pngData()
@@ -121,7 +154,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
             }
             else {
                 print("Error when saving \(ingredient.name) to Parse:\n\(error!.localizedDescription)")
-                self.displayAlert(withTitle: ErrorMessages.generalTitle.rawValue, andMsg: "Error when saving \(ingredient.name) to server! Please try again later.")
+                AlertControl.control.displayAlert(inVC: self, withTitle: ErrorMessages.generalTitle.rawValue, andMsg: "Error when saving \(ingredient.name) to server! Please try again later.")
             }
         }
     }
@@ -148,7 +181,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                         
                     case .failure(let error):
                         print("Spoonacular API request failed\n")
-                        self.displayAlert(withTitle: ErrorMessages.searchTitle.rawValue, andMsg: error.localizedDescription)
+                        AlertControl.control.displayAlert(inVC: self,withTitle: ErrorMessages.searchTitle.rawValue, andMsg: error.localizedDescription)
                 }
         }
     }
@@ -180,7 +213,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                 case .success(let image):
                     print("Obtained \"\(name)\" image successfully\n")
                     // Add ingredient to list
-                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
+                    let ingredient = Ingredient(id: id, name: name, image: image, imageName: imageString, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
                     
                     self.ingredientsList.append(ingredient)
                     self.tableView.reloadData()
@@ -191,23 +224,11 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                     print("Failed to obtain \"\(name)\" image\n")
                     let image = UIImage()
                 
-                    let ingredient = Ingredient(id: id, name: name, image: image, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
+                    let ingredient = Ingredient(id: id, name: name, image: image, imageName: imageString, unit: unit, amount: amount, aisle: aisle, cost: estCosts, possibleUnits: posUnits)
                     
                     self.ingredientsList.append(ingredient)
                     self.tableView.reloadData()
             }
         }
-    }
-    
-    
-    // MARK: - Display Error
-    func displayAlert(withTitle title: String, andMsg message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        // create and add an OK action to alert controller
-        let OKAction = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(OKAction)
-        
-        present(alertController, animated: true)
     }
 }

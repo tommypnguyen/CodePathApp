@@ -8,14 +8,24 @@
 
 import Foundation
 
+enum Compartments : String {
+    case Freezer
+    case Fridge
+    case Drawer
+    
+    static let allValues = [Freezer, Fridge, Drawer]
+}
+
 enum CustomUI : Int {
     case cornerRadius = 5
 }
 
 enum ErrorMessages : String {
-    case generalTitle = "Error"
-    case searchTitle = "Ingredient Error"
+    case generalTitle   = "Error"
+    case searchTitle    = "Ingredient Error"
     case emptySearchMsg = "The ingredient name cannot be empty."
+    case editTitle      = "Edit Error"
+    case emptyMsg       = "Please fill in all information before continuing."
 }
 
 enum FoodDB : String {
@@ -29,6 +39,7 @@ enum FoodDB : String {
     case unit
     case possibleUnits
     case image
+    case imageName
 }
 
 enum ImageSize : String {
@@ -44,6 +55,7 @@ enum ReuseIdentifiers : String {
 
 enum SegueIdentifiers : String {
     case fridgeSegue
+    case editSegue
 }
 
 enum SpoonacularAPI : String {
