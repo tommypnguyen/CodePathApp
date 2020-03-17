@@ -22,6 +22,10 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     var ingredient : Ingredient?
     var index : Int?
+    var selectedField : UITextField?
+    var countryList = ["Algeria", "Andorra"]
+    var countryList2 = ["Angola", "India"]
+    var countryList3 = ["Taiwan", "Thailand"]
 
     
     // MARK: - Initialization
@@ -48,33 +52,84 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     func customizeTextFields() {
-        unitField.addTarget(self, action: #selector(createPickerView), for: .editingDidBegin)
+        unitField.addTarget(self, action: #selector(unitFieldEditing), for: .editingDidBegin)
+        compartmentField.addTarget(self, action: #selector(compartmentFieldEditing), for: .editingDidBegin)
+        drawerField.addTarget(self, action: #selector(drawerFieldEditing), for: .editingDidBegin)
     }
     
     
     // MARK: - PickerView delegates
-    var countryList = ["Algeria", "Andorra", "Angola", "India", "Thailand"]
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return countryList.count
+        switch selectedField {
+            case unitField:
+                return countryList.count
+            
+            case compartmentField:
+                return countryList2.count
+                
+            case drawerField:
+                return countryList3.count
+                
+            default:
+                return 1
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return countryList[row]
+        switch selectedField {
+            case unitField:
+                return countryList[row]
+            
+            case compartmentField:
+                return countryList2[row]
+                
+            case drawerField:
+                return countryList3[row]
+                
+            default:
+                return "None"
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        unitField.text = countryList[row]
+        switch selectedField {
+            case unitField:
+                unitField.text = countryList[row]
+            
+            case compartmentField:
+                compartmentField.text = countryList2[row]
+                
+            case drawerField:
+                drawerField.text = countryList3[row]
+                
+            default:
+                break
+        }
     }
     
-    @objc func createPickerView() {
+    @objc func unitFieldEditing() {
+        selectedField = unitField
+        createPickerView(for: unitField)
+    }
+    
+    @objc func compartmentFieldEditing() {
+        selectedField = compartmentField
+        createPickerView(for: compartmentField)
+    }
+    
+    @objc func drawerFieldEditing() {
+        selectedField = drawerField
+        createPickerView(for: drawerField)
+    }
+    
+    func createPickerView(for field: UITextField) {
         let pickerView = UIPickerView()
         pickerView.delegate = self
-        unitField.inputView = pickerView
+        field.inputView = pickerView
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -83,10 +138,11 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         toolBar.setItems([button], animated: true)
         toolBar.isUserInteractionEnabled = true
-        unitField.inputAccessoryView = toolBar
+        field.inputAccessoryView = toolBar
     }
     
     @objc func closePicker() {
-          view.endEditing(true)
+        selectedField = nil
+        view.endEditing(true)
     }
 }
