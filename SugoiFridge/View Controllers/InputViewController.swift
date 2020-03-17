@@ -12,7 +12,7 @@ import Parse
 import SwiftyJSON
 import UIKit
 
-class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
+class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, IngredientsDelegate {
 
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
@@ -83,12 +83,21 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     }
     
     
+    // MARK: - Ingredients Delegate
+    func updateIngredient(with newIngredient: Ingredient, at index: Int) {
+        ingredientsList[index] = newIngredient
+        tableView.reloadData()
+    }
+    
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == SegueIdentifiers.editSegue.rawValue) {
             let destinationVC = segue.destination as! EditViewController
+            
+            destinationVC.delegate   = self
             destinationVC.ingredient = ingredientToEdit
-            destinationVC.index = indexToEdit
+            destinationVC.index      = indexToEdit
         }
     }
     

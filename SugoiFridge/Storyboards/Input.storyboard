@@ -212,24 +212,24 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpG-GF-KCA">
-                                <rect key="frame" x="139" y="286" width="136" height="20.5"/>
+                                <rect key="frame" x="139" y="274" width="136" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Quantity" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="woM-gf-Y7e" userLabel="Quantity TextField">
-                                <rect key="frame" x="78" y="369.5" width="121" height="34"/>
+                                <rect key="frame" x="78" y="357.5" width="121" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compartment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZk-pd-Uhn" userLabel="Hint Compartment">
-                                <rect key="frame" x="83.5" y="446" width="106.5" height="21"/>
+                                <rect key="frame" x="83.5" y="434" width="106.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose compartment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JrV-h8-RcD">
-                                <rect key="frame" x="212" y="439.5" width="182" height="34"/>
+                                <rect key="frame" x="212" y="427.5" width="182" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="182" id="hdi-d4-pg6"/>
                                 </constraints>
@@ -237,18 +237,18 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose drawer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-1Z-PVg" userLabel="Drawer TextField">
-                                <rect key="frame" x="212" y="481.5" width="182" height="34"/>
+                                <rect key="frame" x="212" y="469.5" width="182" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RE-SJ-biQ" userLabel="Hint Drawer">
-                                <rect key="frame" x="135.5" y="481.5" width="54.5" height="34"/>
+                                <rect key="frame" x="135.5" y="469.5" width="54.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeG-Ax-Pde">
-                                <rect key="frame" x="207" y="386.5" width="0.0" height="0.0"/>
+                                <rect key="frame" x="207" y="374.5" width="0.0" height="0.0"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="Iny-7H-U7i"/>
@@ -256,7 +256,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igd-9A-Njy" userLabel="Unit TextField">
-                                <rect key="frame" x="215" y="369.5" width="176" height="34"/>
+                                <rect key="frame" x="215" y="357.5" width="176" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -277,7 +277,7 @@
                             <constraint firstItem="JrV-h8-RcD" firstAttribute="top" secondItem="igd-9A-Njy" secondAttribute="bottom" constant="36" id="U09-NJ-p4O"/>
                             <constraint firstItem="1RE-SJ-biQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dww-3P-fBZ" secondAttribute="leading" constant="8" id="W05-ne-Vv1"/>
                             <constraint firstItem="1RE-SJ-biQ" firstAttribute="trailing" secondItem="CZk-pd-Uhn" secondAttribute="trailing" id="X6U-dO-vpa"/>
-                            <constraint firstItem="tpG-GF-KCA" firstAttribute="top" secondItem="8hr-ZG-NC0" secondAttribute="bottom" constant="20" id="YEw-iG-Ciq"/>
+                            <constraint firstItem="tpG-GF-KCA" firstAttribute="top" secondItem="8hr-ZG-NC0" secondAttribute="bottom" constant="8" id="YEw-iG-Ciq"/>
                             <constraint firstItem="XAf-1Z-PVg" firstAttribute="top" secondItem="JrV-h8-RcD" secondAttribute="bottom" constant="8" symbolic="YES" id="aiJ-Pu-RWk"/>
                             <constraint firstItem="woM-gf-Y7e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dww-3P-fBZ" secondAttribute="leading" constant="8" id="crl-GN-D0X"/>
                             <constraint firstItem="8hr-ZG-NC0" firstAttribute="top" secondItem="dww-3P-fBZ" secondAttribute="top" constant="50" id="d9m-6Y-lkt"/>
@@ -294,7 +294,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dww-3P-fBZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Edit Ingredient" id="Ihf-3A-5c8"/>
+                    <navigationItem key="navigationItem" title="Edit Ingredient" id="Ihf-3A-5c8">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="u3E-QA-fzK">
+                            <connections>
+                                <action selector="onDoneEditing:" destination="eZo-lf-mmH" id="AiO-Lh-k45"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="compartmentField" destination="JrV-h8-RcD" id="iNa-eM-tPh"/>
                         <outlet property="drawerField" destination="XAf-1Z-PVg" id="hYl-MY-8MY"/>

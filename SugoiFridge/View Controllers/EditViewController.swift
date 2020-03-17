@@ -18,6 +18,7 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var compartmentField: UITextField!
     @IBOutlet weak var drawerField: UITextField!
     
+    var delegate : IngredientsDelegate?
     var ingredient : Ingredient?
     var index : Int?
     var selectedField : UITextField?
@@ -50,7 +51,10 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func customizeTextFields() {
         unitField.addTarget(self, action: #selector(unitFieldEditing), for: .editingDidBegin)
         compartmentField.addTarget(self, action: #selector(compartmentFieldEditing), for: .editingDidBegin)
-//        drawerField.addTarget(self, action: #selector(drawerFieldEditing), for: .editingDidBegin)
+        
+        // TODO: whether to implement pickerview for drawer or have user
+        // enter custom drawers?
+        // drawerField.addTarget(self, action: #selector(drawerFieldEditing), for: .editingDidBegin)
     }
     
     
@@ -140,5 +144,17 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @objc func closePicker() {
         selectedField = nil
         view.endEditing(true)
+    }
+    
+    
+    // MARK: - Action Functions
+    @IBAction func onDoneEditing(_ sender: Any) {
+        // TODO: check fields are not empty
+        
+        let newIngredient = Ingredient(id: ingredient!.id, name: ingredient!.name, image: ingredient!.image, imageName: ingredient!.imageName, unit: unitField.text!, amount: Double(quantityField.text!) ?? 0.0, aisle: drawerField.text!, cost: ingredient!.cost, possibleUnits: ingredient!.possibleUnits)
+        
+        delegate?.updateIngredient(with: newIngredient, at: index!)
+        
+        navigationController?.popViewController(animated: true)
     }
 }
