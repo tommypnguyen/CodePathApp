@@ -19,6 +19,7 @@
 		D106C36924146F11000B5396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36824146F11000B5396 /* Main.storyboard */; };
 		D106C36B241471F0000B5396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36A241471F0000B5396 /* LaunchScreen.storyboard */; };
 		D139BD162421788D007D7EA8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D139BD152421788D007D7EA8 /* Protocols.swift */; };
+		D139BD18242180AF007D7EA8 /* AlertControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D139BD17242180AF007D7EA8 /* AlertControl.swift */; };
 		D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359A24144C5E00441130 /* AppDelegate.swift */; };
 		D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359C24144C5E00441130 /* SceneDelegate.swift */; };
 		D18E35A424144C6300441130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A324144C6300441130 /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		D106C36824146F11000B5396 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D106C36A241471F0000B5396 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D139BD152421788D007D7EA8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		D139BD17242180AF007D7EA8 /* AlertControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControl.swift; sourceTree = "<group>"; };
 		D18E359724144C5E00441130 /* SugoiFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugoiFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E359A24144C5E00441130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D18E359C24144C5E00441130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				D1FCBC87241E2898000C31DB /* APICallers.swift */,
+				D139BD17242180AF007D7EA8 /* AlertControl.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				17536FE824156774004FDBD5 /* FridgeTableViewCell.swift in Sources */,
 				17536FF1241E323A004FDBD5 /* LoginViewController.swift in Sources */,
 				D1FCBC9E241E2D91000C31DB /* RecipeCell.swift in Sources */,
+				D139BD18242180AF007D7EA8 /* AlertControl.swift in Sources */,
 				D1FCBCA1241E2DA4000C31DB /* RecipeCollectionViewController.swift in Sources */,
 				17536FE324147A51004FDBD5 /* FridgeViewController.swift in Sources */,
 				D1FCBC90241E2899000C31DB /* Structs.swift in Sources */,

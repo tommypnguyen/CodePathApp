@@ -149,12 +149,33 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     // MARK: - Action Functions
     @IBAction func onDoneEditing(_ sender: Any) {
-        // TODO: check fields are not empty
+        // check if a single field is empty
+        if checkFieldsEmpty() {
+            AlertControl.control.displayAlert(inVC: self, withTitle: ErrorMessages.editTitle.rawValue, andMsg: ErrorMessages.emptyMsg.rawValue)
+        }
+        else {
+            let newIngredient = Ingredient(id: ingredient!.id, name: ingredient!.name, image: ingredient!.image, imageName: ingredient!.imageName, unit: unitField.text!, amount: Double(quantityField.text!) ?? 0.0, aisle: drawerField.text!, cost: ingredient!.cost, possibleUnits: ingredient!.possibleUnits)
+            
+            delegate?.updateIngredient(with: newIngredient, at: index!)
+            
+            navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    
+    // MARK: - Helper Functions
+    func checkFieldEmpty(_ field: UITextField) -> Bool {
+        return field.text?.isEmpty ?? true
+    }
+    
+    func checkFieldsEmpty() -> Bool {
+        // TODO: drawerfield check might not be necessary if we use
+        // a PickerView
+        let quantityEmpty    = checkFieldEmpty(quantityField)
+        let unitEmpty        = checkFieldEmpty(unitField)
+        let compartmentEmpty = checkFieldEmpty(compartmentField)
+        let drawerEmpty      = checkFieldEmpty(drawerField)
         
-        let newIngredient = Ingredient(id: ingredient!.id, name: ingredient!.name, image: ingredient!.image, imageName: ingredient!.imageName, unit: unitField.text!, amount: Double(quantityField.text!) ?? 0.0, aisle: drawerField.text!, cost: ingredient!.cost, possibleUnits: ingredient!.possibleUnits)
-        
-        delegate?.updateIngredient(with: newIngredient, at: index!)
-        
-        navigationController?.popViewController(animated: true)
+        return quantityEmpty || unitEmpty || compartmentEmpty || drawerEmpty
     }
 }

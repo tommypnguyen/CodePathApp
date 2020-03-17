@@ -106,7 +106,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         // Check if search bar is empty
         if searchBar.text == "" {
-            displayAlert(withTitle: ErrorMessages.searchTitle.rawValue, andMsg: ErrorMessages.emptySearchMsg.rawValue)
+            AlertControl.control.displayAlert(inVC: self, withTitle: ErrorMessages.searchTitle.rawValue, andMsg: ErrorMessages.emptySearchMsg.rawValue)
         }
         else {
             parseIngredientsRequest()
@@ -154,7 +154,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
             }
             else {
                 print("Error when saving \(ingredient.name) to Parse:\n\(error!.localizedDescription)")
-                self.displayAlert(withTitle: ErrorMessages.generalTitle.rawValue, andMsg: "Error when saving \(ingredient.name) to server! Please try again later.")
+                AlertControl.control.displayAlert(inVC: self, withTitle: ErrorMessages.generalTitle.rawValue, andMsg: "Error when saving \(ingredient.name) to server! Please try again later.")
             }
         }
     }
@@ -181,7 +181,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                         
                     case .failure(let error):
                         print("Spoonacular API request failed\n")
-                        self.displayAlert(withTitle: ErrorMessages.searchTitle.rawValue, andMsg: error.localizedDescription)
+                        AlertControl.control.displayAlert(inVC: self,withTitle: ErrorMessages.searchTitle.rawValue, andMsg: error.localizedDescription)
                 }
         }
     }
@@ -230,17 +230,5 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
                     self.tableView.reloadData()
             }
         }
-    }
-    
-    
-    // MARK: - Display Error
-    func displayAlert(withTitle title: String, andMsg message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        // create and add an OK action to alert controller
-        let OKAction = UIAlertAction(title: "OK", style: .default)
-        alertController.addAction(OKAction)
-        
-        present(alertController, animated: true)
     }
 }

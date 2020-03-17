@@ -21,9 +21,11 @@ enum CustomUI : Int {
 }
 
 enum ErrorMessages : String {
-    case generalTitle = "Error"
-    case searchTitle = "Ingredient Error"
+    case generalTitle   = "Error"
+    case searchTitle    = "Ingredient Error"
     case emptySearchMsg = "The ingredient name cannot be empty."
+    case editTitle      = "Edit Error"
+    case emptyMsg       = "Please fill in all information before continuing."
 }
 
 enum FoodDB : String {
