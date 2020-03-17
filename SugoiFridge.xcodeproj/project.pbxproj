@@ -168,13 +168,10 @@
 		D106C35A24145524000B5396 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D1E390D0241F085100113922 /* EditViewController.swift */,
-				17536FE224147A51004FDBD5 /* FridgeViewController.swift */,
-				D1FCBC80241E284F000C31DB /* InputViewController.swift */,
-				D106C36024145E5B000B5396 /* TestViewController.swift */,
-				D1FCBC9F241E2DA4000C31DB /* RecipeCollectionViewController.swift */,
-				D1FCBCA0241E2DA4000C31DB /* RecipeDetailsViewController.swift */,
-				17536FF0241E323A004FDBD5 /* LoginViewController.swift */,
+				D139BD1C24218A75007D7EA8 /* Fridge */,
+				D139BD1D24218A7C007D7EA8 /* Input */,
+				D139BD1E24218A80007D7EA8 /* Recipe */,
+				D139BD1F24218ACE007D7EA8 /* Others */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -189,6 +186,69 @@
 				D1FCBC97241E2CD0000C31DB /* Recipes.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D139BD1924218A17007D7EA8 /* Fridge */ = {
+			isa = PBXGroup;
+			children = (
+				17536FE724156774004FDBD5 /* FridgeTableViewCell.swift */,
+				17536FE92415678E004FDBD5 /* FridgeCollectionViewCell.swift */,
+			);
+			path = Fridge;
+			sourceTree = "<group>";
+		};
+		D139BD1A24218A34007D7EA8 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				D1FCBC8D241E2898000C31DB /* IngredientTableViewCell.swift */,
+				D1FCBC8C241E2898000C31DB /* NewIngredientTableViewCell.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		D139BD1B24218A44007D7EA8 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				D1FCBC9B241E2D91000C31DB /* RecipeCell.swift */,
+				D1FCBC99241E2D90000C31DB /* RecipeCollectionViewCell.swift */,
+				D1FCBC9A241E2D90000C31DB /* RecipeLayout.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		D139BD1C24218A75007D7EA8 /* Fridge */ = {
+			isa = PBXGroup;
+			children = (
+				17536FE224147A51004FDBD5 /* FridgeViewController.swift */,
+			);
+			path = Fridge;
+			sourceTree = "<group>";
+		};
+		D139BD1D24218A7C007D7EA8 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				D1E390D0241F085100113922 /* EditViewController.swift */,
+				D1FCBC80241E284F000C31DB /* InputViewController.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		D139BD1E24218A80007D7EA8 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				D1FCBC9F241E2DA4000C31DB /* RecipeCollectionViewController.swift */,
+				D1FCBCA0241E2DA4000C31DB /* RecipeDetailsViewController.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		D139BD1F24218ACE007D7EA8 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D106C36024145E5B000B5396 /* TestViewController.swift */,
+				17536FF0241E323A004FDBD5 /* LoginViewController.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		D18E358E24144C5E00441130 = {
@@ -268,13 +328,9 @@
 		D1FCBC8B241E2898000C31DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				17536FE724156774004FDBD5 /* FridgeTableViewCell.swift */,
-				17536FE92415678E004FDBD5 /* FridgeCollectionViewCell.swift */,
-				D1FCBC8D241E2898000C31DB /* IngredientTableViewCell.swift */,
-				D1FCBC8C241E2898000C31DB /* NewIngredientTableViewCell.swift */,
-				D1FCBC9B241E2D91000C31DB /* RecipeCell.swift */,
-				D1FCBC99241E2D90000C31DB /* RecipeCollectionViewCell.swift */,
-				D1FCBC9A241E2D90000C31DB /* RecipeLayout.swift */,
+				D139BD1924218A17007D7EA8 /* Fridge */,
+				D139BD1A24218A34007D7EA8 /* Input */,
+				D139BD1B24218A44007D7EA8 /* Recipe */,
 			);
 			path = Views;
 			sourceTree = "<group>";
