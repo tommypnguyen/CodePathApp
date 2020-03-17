@@ -8,6 +8,14 @@
 
 import Foundation
 
+enum Compartments : String {
+    case Freezer
+    case Fridge
+    case Drawer
+    
+    static let allValues = [Freezer, Fridge, Drawer]
+}
+
 enum CustomUI : Int {
     case cornerRadius = 5
 }

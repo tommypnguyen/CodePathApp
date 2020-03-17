@@ -10,8 +10,6 @@ import UIKit
 
 class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
-    
-    
     // MARK: - Properties
     @IBOutlet weak var ingredientImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -23,9 +21,7 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     var ingredient : Ingredient?
     var index : Int?
     var selectedField : UITextField?
-    var countryList = ["Algeria", "Andorra"]
-    var countryList2 = ["Angola", "India"]
-    var countryList3 = ["Taiwan", "Thailand"]
+    var countryList = ["Algeria", "Andorra", "Angola", "India", "Taiwan", "Thailand"]
 
     
     // MARK: - Initialization
@@ -54,7 +50,7 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func customizeTextFields() {
         unitField.addTarget(self, action: #selector(unitFieldEditing), for: .editingDidBegin)
         compartmentField.addTarget(self, action: #selector(compartmentFieldEditing), for: .editingDidBegin)
-        drawerField.addTarget(self, action: #selector(drawerFieldEditing), for: .editingDidBegin)
+//        drawerField.addTarget(self, action: #selector(drawerFieldEditing), for: .editingDidBegin)
     }
     
     
@@ -66,45 +62,45 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch selectedField {
             case unitField:
-                return countryList.count
+                return ingredient?.possibleUnits.count ?? 0
             
             case compartmentField:
-                return countryList2.count
+                return Compartments.allValues.count
                 
             case drawerField:
-                return countryList3.count
+                return countryList.count
                 
             default:
-                return 1
+                return 0
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch selectedField {
             case unitField:
-                return countryList[row]
+                return ingredient?.possibleUnits[row] ?? unitField.text
             
             case compartmentField:
-                return countryList2[row]
+                return Compartments.allValues[row].rawValue
                 
             case drawerField:
-                return countryList3[row]
+                return countryList[row]
                 
             default:
-                return "None"
+                return "Unknown"
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch selectedField {
             case unitField:
-                unitField.text = countryList[row]
+                unitField.text = ingredient?.possibleUnits[row] ?? unitField.text
             
             case compartmentField:
-                compartmentField.text = countryList2[row]
+                compartmentField.text = Compartments.allValues[row].rawValue
                 
             case drawerField:
-                drawerField.text = countryList3[row]
+                drawerField.text = countryList[row]
                 
             default:
                 break
