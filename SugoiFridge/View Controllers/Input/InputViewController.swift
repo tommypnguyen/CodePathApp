@@ -27,6 +27,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         // Setting up delegates
         setupTableView()
         setupSearchBar()
+        setupGestureRecognizer()
 
         // UI Customizations
         customizeDoneButton()
@@ -39,6 +40,12 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     
     func setupSearchBar() {
         searchBar.delegate = self
+    }
+    
+    func setupGestureRecognizer() {
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
     }
     
     func customizeDoneButton() {
