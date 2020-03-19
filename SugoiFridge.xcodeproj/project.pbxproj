@@ -20,6 +20,7 @@
 		D106C36B241471F0000B5396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36A241471F0000B5396 /* LaunchScreen.storyboard */; };
 		D139BD162421788D007D7EA8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D139BD152421788D007D7EA8 /* Protocols.swift */; };
 		D139BD18242180AF007D7EA8 /* AlertControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D139BD17242180AF007D7EA8 /* AlertControl.swift */; };
+		D14F109A2422E1E7005045F1 /* ParseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F10992422E1E7005045F1 /* ParseAPI.swift */; };
 		D18E359B24144C5E00441130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359A24144C5E00441130 /* AppDelegate.swift */; };
 		D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E359C24144C5E00441130 /* SceneDelegate.swift */; };
 		D18E35A424144C6300441130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A324144C6300441130 /* Assets.xcassets */; };
@@ -27,7 +28,7 @@
 		D18E35BD24144C6400441130 /* SugoiFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */; };
 		D1E390D1241F085100113922 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E390D0241F085100113922 /* EditViewController.swift */; };
 		D1FCBC82241E2850000C31DB /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC80241E284F000C31DB /* InputViewController.swift */; };
-		D1FCBC8E241E2899000C31DB /* APICallers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC87241E2898000C31DB /* APICallers.swift */; };
+		D1FCBC8E241E2899000C31DB /* SpoonacularAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC87241E2898000C31DB /* SpoonacularAPI.swift */; };
 		D1FCBC8F241E2899000C31DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC89241E2898000C31DB /* Constants.swift */; };
 		D1FCBC90241E2899000C31DB /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC8A241E2898000C31DB /* Structs.swift */; };
 		D1FCBC91241E2899000C31DB /* NewIngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC8C241E2898000C31DB /* NewIngredientTableViewCell.swift */; };
@@ -76,6 +77,7 @@
 		D106C36A241471F0000B5396 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D139BD152421788D007D7EA8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		D139BD17242180AF007D7EA8 /* AlertControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControl.swift; sourceTree = "<group>"; };
+		D14F10992422E1E7005045F1 /* ParseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseAPI.swift; sourceTree = "<group>"; };
 		D18E359724144C5E00441130 /* SugoiFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SugoiFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E359A24144C5E00441130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D18E359C24144C5E00441130 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 		D18E35BE24144C6400441130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1E390D0241F085100113922 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D1FCBC80241E284F000C31DB /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
-		D1FCBC87241E2898000C31DB /* APICallers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICallers.swift; sourceTree = "<group>"; };
+		D1FCBC87241E2898000C31DB /* SpoonacularAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpoonacularAPI.swift; sourceTree = "<group>"; };
 		D1FCBC89241E2898000C31DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D1FCBC8A241E2898000C31DB /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		D1FCBC8C241E2898000C31DB /* NewIngredientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewIngredientTableViewCell.swift; sourceTree = "<group>"; };
@@ -309,8 +311,9 @@
 		D1FCBC86241E2898000C31DB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D1FCBC87241E2898000C31DB /* APICallers.swift */,
 				D139BD17242180AF007D7EA8 /* AlertControl.swift */,
+				D14F10992422E1E7005045F1 /* ParseAPI.swift */,
+				D1FCBC87241E2898000C31DB /* SpoonacularAPI.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -595,8 +598,9 @@
 				D1FCBC8F241E2899000C31DB /* Constants.swift in Sources */,
 				D139BD162421788D007D7EA8 /* Protocols.swift in Sources */,
 				D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */,
-				D1FCBC8E241E2899000C31DB /* APICallers.swift in Sources */,
+				D1FCBC8E241E2899000C31DB /* SpoonacularAPI.swift in Sources */,
 				D1FCBC91241E2899000C31DB /* NewIngredientTableViewCell.swift in Sources */,
+				D14F109A2422E1E7005045F1 /* ParseAPI.swift in Sources */,
 				17536FEA2415678E004FDBD5 /* FridgeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
