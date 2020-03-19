@@ -162,6 +162,7 @@
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Ua0-sL-60X" firstAttribute="trailing" secondItem="f93-2M-wTn" secondAttribute="trailing" id="1JL-2u-Nkq"/>
                             <constraint firstItem="f93-2M-wTn" firstAttribute="top" secondItem="zNx-Sl-7Z6" secondAttribute="bottom" symbolic="YES" id="9p5-ok-cMU"/>
