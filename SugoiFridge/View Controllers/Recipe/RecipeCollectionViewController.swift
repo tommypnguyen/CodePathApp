@@ -8,19 +8,37 @@
 
 import UIKit
 import Alamofire
+import Parse
 
 
 class RecipeCollectionViewController: UICollectionViewController {
     var numberOfRecipe: Int!
-    var parameters = ["apiKey": "6b99189a3bf54d11aa2196d642496bac", "ingredients": "apple,flour,sugar","number":"2"]
+    var parameters = ["apiKey": "6b99189a3bf54d11aa2196d642496bac","number":"20"]
     var parameters2 = ["apiKey": "6b99189a3bf54d11aa2196d642496bac"]
     private let reuseIdentifier = "RecipeCell"
     var recipeArray = [[String: AnyObject]]()
     var ingredientsArray = [String]()
     var instructionsArray = [String]()
+    var food = [PFObject]()
 
 
-
+    func getFood() {
+        let query = PFQuery(className: "Food")
+        query.whereKey("userID", equalTo: PFUser.current())
+        query.limit = 20
+            
+        query.findObjectsInBackground { (food, error) in
+            if food != nil {
+                self.food = food!
+            } else {
+                print(error?.localizedDescription as Any)
+            }
+        }
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        getFood()
+        loadRecipes()
+       }
     override func viewDidLoad() {
         if let layout = collectionView?.collectionViewLayout as? RecipeLayout {
           layout.delegate = self
@@ -31,9 +49,13 @@ class RecipeCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
-        loadRecipes()
     }
     func loadRecipes() {
+        var ingredientList = [String]()
+        for item in self.food {
+            ingredientList.append(item["foodName"] as! String)
+        }
+        parameters["ingredients"] = ingredientList.joined(separator: ",")
         AF.request("https://api.spoonacular.com/recipes/findByIngredients",method: .get, parameters:parameters).validate().responseJSON { (response) in
               guard let recipes = response.value else { return }
               if let tempArray = recipes as? [[String: AnyObject]] {
@@ -45,31 +67,7 @@ class RecipeCollectionViewController: UICollectionViewController {
               }
           }
       }
-    func getRecipe(recipeId: Int){
-        var tempIngredientsArray = [String]()
-        AF.request("https://api.spoonacular.com/recipes/\(recipeId)/information",method: .get, parameters: parameters2).validate().responseJSON { (response) in
-            guard let ingredients = response.value else { return }
-            if let tempArray = ingredients as? [String: AnyObject] {
-                for ingredient in tempArray["extendedIngredients"] as! [AnyObject]  {
-                    tempIngredientsArray.append(ingredient["name"] as! String)
-                }
-                self.ingredientsArray = tempIngredientsArray
-            }
-        }
-    }
     
-    func getRecipeInstructions(recipeId: Int){
-        var tempInstructionsArray = [String]()
-               AF.request("https://api.spoonacular.com/recipes/\(recipeId)/analyzedInstructions",method: .get, parameters: parameters2).validate().responseJSON { (response) in
-                   guard let ingredients = response.value else { return }
-                   if let tempArray = ingredients as? [[String: AnyObject]] {
-                       for ingredient in tempArray[0]["steps"] as! [AnyObject]  {
-                           tempInstructionsArray.append(ingredient["step"] as! String)
-                       }
-                    self.instructionsArray = tempInstructionsArray
-                   }
-               }
-    }
 
     
     // MARK: - Navigation
@@ -81,10 +79,9 @@ class RecipeCollectionViewController: UICollectionViewController {
         let cell = sender as! RecipeCollectionViewCell
         let indexPath = collectionView.indexPath(for: cell)!
         let recipe = recipeArray[indexPath.row]
+        print( recipe)
         let detailsViewController = segue.destination as! RecipeDetailsViewController
         detailsViewController.recipe = recipe
-        getRecipe(recipeId: recipe["id"] as! Int)
-        getRecipeInstructions(recipeId: recipe["id"] as! Int)
 
     }
     
