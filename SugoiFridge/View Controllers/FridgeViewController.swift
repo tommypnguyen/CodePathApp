@@ -1,6 +1,6 @@
 //
 //  FridgeViewController.swift
-//  SugoiFridge
+//  SugoiFridgen
 //
 //  Created by Angelo Domingo on 3/7/20.
 //  Copyright © 2020 TAR. All rights reserved.
@@ -12,19 +12,57 @@ import Parse
 
 class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let cellSpacingHeight: CGFloat = 10
     
     @IBOutlet weak var tableView: UITableView!
+    var food = [PFObject]()
     
-    let categories = ["Freezer","Fridge","Drawers"]
-    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return food.count
+    }
+
+    // There is just one row in every section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 143;//Choose your custom row height
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FridgeFoodCategoryCell") as! FridgeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FridgeTableViewCell") as! FridgeTableViewCell
         
-        cell.categoryLabel.text = categories[indexPath.row]
+        let foodObj = food[indexPath.section]
+        
+        cell.foodLabel.text = foodObj["foodName"] as! String
+        cell.compartmentLabel.text = foodObj["compartment"] as! String
+        cell.typeLabel.text = foodObj["aisle"] as! String
+        cell.amountLabel.text = "\(foodObj["quantity"]!)"
+        cell.unitLabel.text = foodObj["unit"] as! String
+        
+        var image = UIImage()
+        let foodImage = foodObj["image"] as! PFFileObject
+        foodImage.getDataInBackground { (imageData: Data?, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let imageData = imageData {
+                image = UIImage(data:imageData)!
+                cell.foodImage.image = image
+            }
+        }
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 15
         
         return cell
     }
@@ -35,6 +73,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
+        
+        getFood()
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -47,27 +87,30 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
         delegate.window?.rootViewController = loginViewController
     }
+
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        getFood()
         
-        /*
-         override func viewDidAppear(_ animated: Bool) {
-             super.viewDidAppear(animated)
-             
-             let query = PFQuery(className: "Posts")
-             query.includeKeys(["author", "comments", "comments.author"])
-             query.limit = 20
-             
-             query.findObjectsInBackground { (posts, error) in
-                 if posts != nil {
-                     self.posts = posts!
-                     self.tableView.reloadData()
-                 }
-             }
-         }
-         */
+        self.tableView.reloadData()
     }
     
-    //TableView
+    func getFood() {
+        let query = PFQuery(className: "Food")
+        query.whereKey("userID", equalTo: PFUser.current())
+        query.limit = 20
+            
+        query.findObjectsInBackground { (food, error) in
+            if food != nil {
+                self.food = food!
+                self.tableView.reloadData()
+                       
+            } else {
+                print(error?.localizedDescription as Any)
+            }
+        }
+    }
     
 
     /*
@@ -79,22 +122,5 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Pass the selected object to the new view controller.
     }
     */
-
-}
-
-extension FridgeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FridgeFoodCell", for: indexPath as IndexPath) as! FridgeCollectionViewCell
-
-        return cell
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView,
-        numberOfItemsInSection section: Int) -> Int {
-
-        return 2
-    }
 
 }
