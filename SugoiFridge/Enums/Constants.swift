@@ -42,6 +42,13 @@ enum FoodDB : String {
     case imageName
 }
 
+enum ImagePicker : String {
+    case title = "Choose an Image"
+    case camera = "Take Photo"
+    case library = "Choose from Library"
+    case cancel = "Cancel"
+}
+
 enum ImageSize : String {
     case small  = "100x100"
     case medium = "250x250"
@@ -56,6 +63,7 @@ enum ReuseIdentifiers : String {
 enum SegueIdentifiers : String {
     case fridgeSegue
     case editSegue
+    case receiptSegue
 }
 
 enum SpoonacularAPI : String {

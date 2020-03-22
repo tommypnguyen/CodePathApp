@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, IngredientsDelegate {
+class InputViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, IngredientsDelegate {
 
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
@@ -18,6 +18,8 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     var ingredientsList: [Ingredient] = []
     var ingredientToEdit : Ingredient?
     var indexToEdit : Int?
+    
+    var imagePicker = UIImagePickerController()
     
     
     // MARK: - Initialization
@@ -127,5 +129,61 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         }
         
         performSegue(withIdentifier: SegueIdentifiers.fridgeSegue.rawValue, sender: nil)
+    }
+    
+    
+    // MARK: - Receipt Photo
+    @IBAction func takePhoto(_ sender: Any) {
+        imagePicker.delegate   = self
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            presentPickerOptions()
+        }
+        else {
+            openGallery()
+        }
+        
+//        imagePicker.sourceType = .camera
+//        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
+        
+        performSegue(withIdentifier: SegueIdentifiers.receiptSegue.rawValue, sender: self)
+//        imageView.image = info[.originalImage] as? UIImage
+    }
+    
+    // Below code obtained from https://stackoverflow.com/questions/41717115/
+    // how-to-make-uiimagepickercontroller-for-camera-and-photo-library
+    // -at-the-same-tim
+    func presentPickerOptions() {
+        let alert = UIAlertController(title: ImagePicker.title.rawValue, message: nil, preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: ImagePicker.camera.rawValue, style: .default, handler: { _ in
+            self.openCamera()
+        }))
+
+        alert.addAction(UIAlertAction(title: ImagePicker.library.rawValue, style: .default, handler: { _ in
+            self.openGallery()
+        }))
+
+        alert.addAction(UIAlertAction.init(title: ImagePicker.cancel.rawValue, style: .cancel, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func openCamera() {
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = true
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func openGallery() {
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        
+        present(imagePicker, animated: true, completion: nil)
     }
 }

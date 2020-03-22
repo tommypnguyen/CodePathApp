@@ -13,11 +13,11 @@
 		17536FF1241E323A004FDBD5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17536FF0241E323A004FDBD5 /* LoginViewController.swift */; };
 		3ED6A52651B831D59CB0DE02 /* Pods_SugoiFridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFE7E5E155664095BE9D5C2 /* Pods_SugoiFridgeTests.framework */; };
 		8D8A4FBD6723CF4C556ACA2B /* Pods_SugoiFridge_SugoiFridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658BF09028DEAED8AA6A5812 /* Pods_SugoiFridge_SugoiFridgeUITests.framework */; };
-		BB378D63E109EC1F384D8B55 /* Pods_SugoiFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F256E7B258971B73628BBC /* Pods_SugoiFridge.framework */; };
 		D106C36124145E5B000B5396 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D106C36024145E5B000B5396 /* TestViewController.swift */; };
 		D106C36524146DAF000B5396 /* Fridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36424146DAF000B5396 /* Fridge.storyboard */; };
 		D106C36924146F11000B5396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36824146F11000B5396 /* Main.storyboard */; };
 		D106C36B241471F0000B5396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D106C36A241471F0000B5396 /* LaunchScreen.storyboard */; };
+		D110E2E42427122000184626 /* Pods_SugoiFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F256E7B258971B73628BBC /* Pods_SugoiFridge.framework */; };
 		D139BD162421788D007D7EA8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D139BD152421788D007D7EA8 /* Protocols.swift */; };
 		D139BD18242180AF007D7EA8 /* AlertControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D139BD17242180AF007D7EA8 /* AlertControl.swift */; };
 		D14F109A2422E1E7005045F1 /* ParseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14F10992422E1E7005045F1 /* ParseAPI.swift */; };
@@ -75,6 +75,10 @@
 		D106C36424146DAF000B5396 /* Fridge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fridge.storyboard; sourceTree = "<group>"; };
 		D106C36824146F11000B5396 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D106C36A241471F0000B5396 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D110E2D72427103400184626 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D110E2D82427103400184626 /* AlamofireImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D110E2D92427103400184626 /* Parse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Parse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D110E2DA2427103400184626 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D139BD152421788D007D7EA8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		D139BD17242180AF007D7EA8 /* AlertControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControl.swift; sourceTree = "<group>"; };
 		D14F10992422E1E7005045F1 /* ParseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseAPI.swift; sourceTree = "<group>"; };
@@ -112,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB378D63E109EC1F384D8B55 /* Pods_SugoiFridge.framework in Frameworks */,
+				D110E2E42427122000184626 /* Pods_SugoiFridge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +142,10 @@
 		4CA044F432A2F8203F421CD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D110E2D72427103400184626 /* Alamofire.framework */,
+				D110E2D82427103400184626 /* AlamofireImage.framework */,
+				D110E2D92427103400184626 /* Parse.framework */,
+				D110E2DA2427103400184626 /* SwiftyJSON.framework */,
 				60F256E7B258971B73628BBC /* Pods_SugoiFridge.framework */,
 				658BF09028DEAED8AA6A5812 /* Pods_SugoiFridge_SugoiFridgeUITests.framework */,
 				7EFE7E5E155664095BE9D5C2 /* Pods_SugoiFridgeTests.framework */,
@@ -757,12 +765,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3GA5W563G6;
 				INFOPLIST_FILE = SugoiFridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tar.SugoiFridge;
+				PRODUCT_BUNDLE_IDENTIFIER = rh.SugoiFridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -775,12 +784,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3GA5W563G6;
 				INFOPLIST_FILE = SugoiFridge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tar.SugoiFridge;
+				PRODUCT_BUNDLE_IDENTIFIER = rh.SugoiFridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

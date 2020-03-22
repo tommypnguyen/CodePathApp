@@ -155,6 +155,9 @@
                                 <state key="normal" backgroundImage="camera.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="PQE-sd-9Kn" eventType="touchUpInside" id="JVS-7T-X2g"/>
+                                </connections>
                             </button>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search (e.g. 3 oz pork shoulder)" translatesAutoresizingMaskIntoConstraints="NO" id="zNx-Sl-7Z6">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
@@ -190,6 +193,7 @@
                         <outlet property="searchBar" destination="zNx-Sl-7Z6" id="Rb7-m4-Ww7"/>
                         <outlet property="tableView" destination="f93-2M-wTn" id="RTr-NT-D5q"/>
                         <segue destination="eZo-lf-mmH" kind="show" identifier="editSegue" id="eXg-mS-Kzu"/>
+                        <segue destination="b4T-DW-TGp" kind="presentation" identifier="receiptSegue" modalPresentationStyle="fullScreen" id="Oqh-dH-u4C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaK-eN-mKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -313,7 +317,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Yb-ld-dJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2779.7101449275365" y="-139.28571428571428"/>
+            <point key="canvasLocation" x="2910" y="-492"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y65-Va-M3U">
+            <objects>
+                <viewController id="b4T-DW-TGp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hy6-C9-QdY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="g93-4b-biG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8H-J1-aXN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2909" y="301"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ext-Sg-8yb">
