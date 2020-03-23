@@ -11,6 +11,7 @@ import Parse
 
 class EditFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate  {
 
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var quantityField: UITextField!
@@ -27,6 +28,7 @@ class EditFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        deleteButton.layer.cornerRadius = CGFloat(CustomUI.cornerRadius.rawValue)
         populateUI()
         customizeTextFields()
     }

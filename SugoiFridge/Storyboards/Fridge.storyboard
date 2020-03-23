@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Food-->
+        <!--Fridge-->
         <scene sceneID="n3o-Hi-Vbr">
             <objects>
                 <viewController id="BQx-xH-i1y" customClass="FridgeViewController" customModule="SugoiFridge" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,7 +140,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Evd-yo-Zje"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Food" id="bz3-Ki-aRE">
+                    <navigationItem key="navigationItem" title="Fridge" id="bz3-Ki-aRE">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="68n-TH-M1b">
                             <connections>
                                 <action selector="logout:" destination="BQx-xH-i1y" id="kmS-6k-Adf"/>
@@ -250,8 +250,8 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compartment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVB-wC-bic" userLabel="Hint Compartment">
-                                <rect key="frame" x="83.5" y="390" width="106.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="100.5" y="392" width="89.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -269,8 +269,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drawer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPX-cp-i2e" userLabel="Hint Drawer">
-                                <rect key="frame" x="135.5" y="425.5" width="54.5" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="144" y="425.5" width="46" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -287,26 +287,38 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqs-kN-bux">
-                                <rect key="frame" x="26" y="44" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqs-kN-bux">
+                                <rect key="frame" x="16" y="52" width="34" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="Dark Pink"/>
+                                </state>
                                 <connections>
                                     <segue destination="c07-Kz-ABE" kind="presentation" identifier="backToFoodSegue" modalPresentationStyle="fullScreen" id="LMH-8W-axH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcj-d5-5Rb">
-                                <rect key="frame" x="181" y="511" width="53" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Change"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcj-d5-5Rb">
+                                <rect key="frame" x="129.5" y="507.5" width="155" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="xpB-QG-ASH"/>
+                                </constraints>
+                                <state key="normal" title="Change">
+                                    <color key="titleColor" name="Dark Pink"/>
+                                </state>
                                 <connections>
                                     <action selector="change:" destination="UgF-pd-En3" eventType="touchUpInside" id="Tam-nS-mcI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE2-hm-oQy">
-                                <rect key="frame" x="160" y="549" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Remove Food"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE2-hm-oQy">
+                                <rect key="frame" x="129.5" y="549.5" width="155" height="30"/>
+                                <color key="backgroundColor" name="Dark Pink"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="Ifm-xl-btF"/>
+                                </constraints>
+                                <color key="tintColor" name="Light Pink"/>
+                                <state key="normal" title="Delete Ingredient">
+                                    <color key="titleColor" name="White"/>
+                                </state>
                                 <connections>
                                     <action selector="remove:" destination="UgF-pd-En3" eventType="touchUpInside" id="mKB-T1-w3U"/>
                                 </connections>
@@ -315,9 +327,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="QxH-SP-Kui" firstAttribute="trailing" secondItem="k5w-bw-oxl" secondAttribute="trailing" id="4qh-eh-nZJ"/>
+                            <constraint firstItem="kE2-hm-oQy" firstAttribute="centerX" secondItem="8Or-DY-OyU" secondAttribute="centerX" id="6jz-v4-i66"/>
                             <constraint firstItem="QxH-SP-Kui" firstAttribute="leading" secondItem="UVB-wC-bic" secondAttribute="trailing" constant="22" id="8aK-5U-jof"/>
                             <constraint firstItem="UVB-wC-bic" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MUj-JI-8in" secondAttribute="leading" constant="8" id="8xQ-ad-Mbn"/>
+                            <constraint firstItem="Mcj-d5-5Rb" firstAttribute="top" secondItem="k5w-bw-oxl" secondAttribute="bottom" constant="48" id="Dad-pV-bz8"/>
+                            <constraint firstItem="kE2-hm-oQy" firstAttribute="top" secondItem="Mcj-d5-5Rb" secondAttribute="bottom" constant="12" id="Dba-2Z-Lbz"/>
+                            <constraint firstItem="Mcj-d5-5Rb" firstAttribute="centerX" secondItem="8Or-DY-OyU" secondAttribute="centerX" id="FID-nf-olt"/>
                             <constraint firstItem="QxH-SP-Kui" firstAttribute="leading" secondItem="k5w-bw-oxl" secondAttribute="leading" id="Jfa-Nb-Sam"/>
+                            <constraint firstItem="wqs-kN-bux" firstAttribute="top" secondItem="MUj-JI-8in" secondAttribute="top" constant="8" id="KQQ-c2-kOO"/>
                             <constraint firstItem="MUj-JI-8in" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aPX-cp-i2e" secondAttribute="bottom" constant="8" id="LTB-fj-fyF"/>
                             <constraint firstItem="k5w-bw-oxl" firstAttribute="top" secondItem="QxH-SP-Kui" secondAttribute="bottom" constant="8" symbolic="YES" id="LqW-ds-a7B"/>
                             <constraint firstItem="MUj-JI-8in" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YKu-pk-dnK" secondAttribute="trailing" constant="8" id="Mt2-82-l55"/>
@@ -340,6 +357,7 @@
                             <constraint firstItem="QxH-SP-Kui" firstAttribute="trailing" secondItem="8Or-DY-OyU" secondAttribute="trailingMargin" id="snv-Ig-vzT"/>
                             <constraint firstItem="w89-SJ-Vbp" firstAttribute="top" secondItem="PW5-hY-o9V" secondAttribute="bottom" constant="8" id="u3c-07-mNK"/>
                             <constraint firstItem="QxH-SP-Kui" firstAttribute="top" secondItem="YKu-pk-dnK" secondAttribute="bottom" constant="36" id="vbf-SN-RvI"/>
+                            <constraint firstItem="wqs-kN-bux" firstAttribute="leading" secondItem="MUj-JI-8in" secondAttribute="leading" constant="16" id="x3F-uU-SeM"/>
                             <constraint firstItem="QxH-SP-Kui" firstAttribute="centerY" secondItem="UVB-wC-bic" secondAttribute="centerY" id="yRE-qs-Dha"/>
                             <constraint firstItem="PW5-hY-o9V" firstAttribute="centerX" secondItem="8Or-DY-OyU" secondAttribute="centerX" id="zNk-SI-6An"/>
                         </constraints>
@@ -354,6 +372,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="compartmentField" destination="QxH-SP-Kui" id="E1s-iW-GqX"/>
+                        <outlet property="deleteButton" destination="kE2-hm-oQy" id="FFc-o5-7hH"/>
                         <outlet property="drawerField" destination="k5w-bw-oxl" id="OFu-jy-bVt"/>
                         <outlet property="foodImage" destination="PW5-hY-o9V" id="kj1-2r-gBh"/>
                         <outlet property="foodLabel" destination="w89-SJ-Vbp" id="gKc-om-jfI"/>
