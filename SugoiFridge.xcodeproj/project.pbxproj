@@ -11,6 +11,7 @@
 		175370012427DCBF004FDBD5 /* FridgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175370002427DCBF004FDBD5 /* FridgeTableViewCell.swift */; };
 		175370032427DCCF004FDBD5 /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175370022427DCCF004FDBD5 /* FridgeViewController.swift */; };
 		175370072428080F004FDBD5 /* Fridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175370062428080F004FDBD5 /* Fridge.storyboard */; };
+		1753700924280901004FDBD5 /* EditFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753700824280901004FDBD5 /* EditFoodViewController.swift */; };
 		3ED6A52651B831D59CB0DE02 /* Pods_SugoiFridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EFE7E5E155664095BE9D5C2 /* Pods_SugoiFridgeTests.framework */; };
 		8D8A4FBD6723CF4C556ACA2B /* Pods_SugoiFridge_SugoiFridgeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 658BF09028DEAED8AA6A5812 /* Pods_SugoiFridge_SugoiFridgeUITests.framework */; };
 		BB378D63E109EC1F384D8B55 /* Pods_SugoiFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F256E7B258971B73628BBC /* Pods_SugoiFridge.framework */; };
@@ -63,6 +64,7 @@
 		175370002427DCBF004FDBD5 /* FridgeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeTableViewCell.swift; sourceTree = "<group>"; };
 		175370022427DCCF004FDBD5 /* FridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
 		175370062428080F004FDBD5 /* Fridge.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fridge.storyboard; sourceTree = "<group>"; };
+		1753700824280901004FDBD5 /* EditFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFoodViewController.swift; sourceTree = "<group>"; };
 		4A49101BCF03F4D984F40154 /* Pods-SugoiFridge-SugoiFridgeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SugoiFridge-SugoiFridgeUITests.debug.xcconfig"; path = "Target Support Files/Pods-SugoiFridge-SugoiFridgeUITests/Pods-SugoiFridge-SugoiFridgeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		60F256E7B258971B73628BBC /* Pods_SugoiFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugoiFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		658BF09028DEAED8AA6A5812 /* Pods_SugoiFridge_SugoiFridgeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SugoiFridge_SugoiFridgeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				175370022427DCCF004FDBD5 /* FridgeViewController.swift */,
+				1753700824280901004FDBD5 /* EditFoodViewController.swift */,
 			);
 			path = Fridge;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				D1FCBC8F241E2899000C31DB /* Constants.swift in Sources */,
 				D139BD162421788D007D7EA8 /* Protocols.swift in Sources */,
 				D18E359D24144C5E00441130 /* SceneDelegate.swift in Sources */,
+				1753700924280901004FDBD5 /* EditFoodViewController.swift in Sources */,
 				175370012427DCBF004FDBD5 /* FridgeTableViewCell.swift in Sources */,
 				D1FCBC8E241E2899000C31DB /* SpoonacularAPI.swift in Sources */,
 				D1FCBC91241E2899000C31DB /* NewIngredientTableViewCell.swift in Sources */,

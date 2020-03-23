@@ -15,6 +15,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let cellSpacingHeight: CGFloat = 10
     
     @IBOutlet weak var tableView: UITableView!
+    var indexToEdit: Int = 0
+    var selectedFood: PFObject!
     var food = [PFObject]()
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,28 +47,52 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let foodObj = food[indexPath.section]
         
-        cell.foodLabel.text = foodObj["foodName"] as! String
-        cell.compartmentLabel.text = foodObj["compartment"] as! String
-        cell.typeLabel.text = foodObj["aisle"] as! String
+        cell.foodLabel.text = foodObj["foodName"] as? String ?? ""
+        cell.compartmentLabel.text = foodObj["compartment"] as? String ?? ""
+        cell.typeLabel.text = foodObj["aisle"] as? String ?? ""
         cell.amountLabel.text = "\(foodObj["quantity"]!)"
-        cell.unitLabel.text = foodObj["unit"] as! String
+        cell.unitLabel.text = foodObj["unit"] as? String ?? ""
         
         var image = UIImage()
-        let foodImage = foodObj["image"] as! PFFileObject
-        foodImage.getDataInBackground { (imageData: Data?, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let imageData = imageData {
-                image = UIImage(data:imageData)!
-                cell.foodImage.image = image
+        
+        if let foodImage = foodObj["image"] as! PFFileObject {
+            foodImage.getDataInBackground { (imageData: Data?, error: Error?) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let imageData = imageData {
+                    image = UIImage(data:imageData)!
+                    cell.foodImage.image = image
+                }
             }
         }
+        
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 15
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Get the ingredient that needs to be passed to next scene
+        // and save it locally to be accessed later
+        selectedFood     = food[indexPath.section]
+        indexToEdit      = indexPath.row
+        
+        performSegue(withIdentifier: "editFoodSegue", sender: self)
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "editFoodSegue") {
+            let destinationVC = segue.destination as! EditFoodViewController
+            
+           //destinationVC.delegate   = self
+            destinationVC.ingredient = selectedFood
+            destinationVC.index      = indexToEdit
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
