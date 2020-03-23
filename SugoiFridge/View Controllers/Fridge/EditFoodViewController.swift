@@ -55,6 +55,11 @@ class EditFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
+    @IBAction func remove(_ sender: Any) {
+        ingredient.deleteInBackground()
+        
+        self.performSegue(withIdentifier: "backToFoodSegue", sender: self)
+    }
     
     
     func populateUI() {
@@ -64,8 +69,17 @@ class EditFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         compartmentField.text = (ingredient?["compartment"] as! String)
         drawerField.text      = (ingredient?["aisle"] as! String)
         
+        if ingredient?["image"] != nil {
+            let foodImage = ingredient?["image"] as! PFFileObject
+            foodImage.getDataInBackground { (imageData: Data?, error: Error?) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let imageData = imageData {
+                    self.foodImage.image = UIImage(data:imageData)!
+                }
+            }
+        }
         
-        // Assign image to UIImageView
     }
     
     

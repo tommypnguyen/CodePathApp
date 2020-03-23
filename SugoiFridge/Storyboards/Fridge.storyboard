@@ -207,6 +207,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kd4-Uq-jZJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="Dark Pink"/>
+                        <color key="barTintColor" name="Dark Pink"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="Navy"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -297,6 +302,14 @@
                                     <action selector="change:" destination="UgF-pd-En3" eventType="touchUpInside" id="Tam-nS-mcI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kE2-hm-oQy">
+                                <rect key="frame" x="160" y="549" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Remove Food"/>
+                                <connections>
+                                    <action selector="remove:" destination="UgF-pd-En3" eventType="touchUpInside" id="mKB-T1-w3U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -355,11 +368,17 @@
     <resources>
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="rosette" catalog="system" width="50" height="64"/>
+        <namedColor name="Dark Pink">
+            <color red="0.91764705882352937" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Grey">
             <color red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Light Pink">
             <color red="1" green="0.85882352941176465" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Navy">
+            <color red="0.22745098039215686" green="0.27450980392156865" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
