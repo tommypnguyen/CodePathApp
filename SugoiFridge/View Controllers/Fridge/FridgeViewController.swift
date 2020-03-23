@@ -49,7 +49,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let foodObj = food[indexPath.section]
         
-        cell.foodLabel.text = foodObj["foodName"] as? String ?? ""
+        cell.foodLabel.text = (foodObj["foodName"] as? String ?? "").capitalizeFirstLetter()
         cell.compartmentLabel.text = foodObj["compartment"] as? String ?? ""
         cell.typeLabel.text = foodObj["aisle"] as? String ?? ""
         cell.amountLabel.text = "\(foodObj["quantity"]!)"
