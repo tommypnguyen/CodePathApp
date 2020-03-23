@@ -34,7 +34,7 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     func populateUI() {
-        nameLabel.text        = ingredient?.name
+        nameLabel.text        = ingredient?.name.capitalized
         quantityField.text    = String(format: "%.1f", ingredient!.amount)
         unitField.text        = ingredient?.unit
         compartmentField.text = ingredient?.compartment
