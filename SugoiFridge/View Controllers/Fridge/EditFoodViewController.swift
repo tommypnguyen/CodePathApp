@@ -65,7 +65,7 @@ class EditFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     func populateUI() {
-        foodLabel.text        = (ingredient?["foodName"] as! String)
+        foodLabel.text        = (ingredient?["foodName"] as! String).capitalized
         quantityField.text    = "\(ingredient!["quantity"]!)"
         unitField.text        = (ingredient?["unit"] as! String)
         compartmentField.text = (ingredient?["compartment"] as! String)
