@@ -95,7 +95,7 @@
                 <viewControllerPlaceholder storyboardName="Fridge" id="P76-1w-0PR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wU-Hb-UUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665" y="-86"/>
+            <point key="canvasLocation" x="688" y="0.0"/>
         </scene>
     </scenes>
     <resources>
