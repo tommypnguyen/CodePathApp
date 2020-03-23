@@ -19,6 +19,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var selectedFood: PFObject!
     var food = [PFObject]()
     
+    let myRefreshControl = UIRefreshControl()
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return food.count
     }
@@ -102,6 +104,9 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Do any additional setup after loading the view.
         
         getFood()
+        
+        myRefreshControl.addTarget(self, action: #selector(getFood), for: .valueChanged)
+        tableView.refreshControl = myRefreshControl
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -123,7 +128,7 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.reloadData()
     }
     
-    func getFood() {
+    @objc func getFood() {
         let query = PFQuery(className: "Food")
         query.whereKey("userID", equalTo: PFUser.current())
         query.limit = 20
@@ -133,6 +138,9 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self.food = food!
                 self.tableView.reloadData()
                        
+                self.tableView.reloadData()
+                self.myRefreshControl.endRefreshing()
+                
             } else {
                 print(error?.localizedDescription as Any)
             }
