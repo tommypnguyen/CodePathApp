@@ -30,6 +30,7 @@ class RecipeCollectionViewController: UICollectionViewController {
         query.findObjectsInBackground { (food, error) in
             if food != nil {
                 self.food = food!
+                self.loadRecipes()
             } else {
                 print(error?.localizedDescription as Any)
             }
@@ -37,7 +38,6 @@ class RecipeCollectionViewController: UICollectionViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         getFood()
-        loadRecipes()
        }
     override func viewDidLoad() {
         if let layout = collectionView?.collectionViewLayout as? RecipeLayout {
@@ -49,6 +49,7 @@ class RecipeCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
+//        loadRecipes()
     }
     func loadRecipes() {
         var ingredientList = [String]()
@@ -79,7 +80,6 @@ class RecipeCollectionViewController: UICollectionViewController {
         let cell = sender as! RecipeCollectionViewCell
         let indexPath = collectionView.indexPath(for: cell)!
         let recipe = recipeArray[indexPath.row]
-        print( recipe)
         let detailsViewController = segue.destination as! RecipeDetailsViewController
         detailsViewController.recipe = recipe
 
