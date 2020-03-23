@@ -25,6 +25,7 @@
 		D18E35A424144C6300441130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E35A324144C6300441130 /* Assets.xcassets */; };
 		D18E35B224144C6400441130 /* SugoiFridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35B124144C6400441130 /* SugoiFridgeTests.swift */; };
 		D18E35BD24144C6400441130 /* SugoiFridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */; };
+		D1C5404F2428335000E91DB0 /* StringCapitalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5404E2428335000E91DB0 /* StringCapitalization.swift */; };
 		D1E390D1241F085100113922 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E390D0241F085100113922 /* EditViewController.swift */; };
 		D1FCBC82241E2850000C31DB /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC80241E284F000C31DB /* InputViewController.swift */; };
 		D1FCBC8E241E2899000C31DB /* SpoonacularAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FCBC87241E2898000C31DB /* SpoonacularAPI.swift */; };
@@ -87,6 +88,7 @@
 		D18E35B824144C6400441130 /* SugoiFridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugoiFridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E35BC24144C6400441130 /* SugoiFridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugoiFridgeUITests.swift; sourceTree = "<group>"; };
 		D18E35BE24144C6400441130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1C5404E2428335000E91DB0 /* StringCapitalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCapitalization.swift; sourceTree = "<group>"; };
 		D1E390D0241F085100113922 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		D1FCBC80241E284F000C31DB /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		D1FCBC87241E2898000C31DB /* SpoonacularAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpoonacularAPI.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				D106C35924145515000B5396 /* Delegates */,
 				D1FCBC88241E2898000C31DB /* Enums */,
+				D1C5404D2428332B00E91DB0 /* Extensions */,
 				D1FCBC86241E2898000C31DB /* Helpers */,
 				D106C35B2414552E000B5396 /* Storyboards */,
 				D1FCBC8B241E2898000C31DB /* Views */,
@@ -303,6 +306,14 @@
 				D18E35BE24144C6400441130 /* Info.plist */,
 			);
 			path = SugoiFridgeUITests;
+			sourceTree = "<group>";
+		};
+		D1C5404D2428332B00E91DB0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D1C5404E2428335000E91DB0 /* StringCapitalization.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D1FCBC86241E2898000C31DB /* Helpers */ = {
@@ -587,6 +598,7 @@
 				D1FCBCA1241E2DA4000C31DB /* RecipeCollectionViewController.swift in Sources */,
 				D1FCBC90241E2899000C31DB /* Structs.swift in Sources */,
 				D1FCBC9C241E2D91000C31DB /* RecipeCollectionViewCell.swift in Sources */,
+				D1C5404F2428335000E91DB0 /* StringCapitalization.swift in Sources */,
 				D1FCBC82241E2850000C31DB /* InputViewController.swift in Sources */,
 				D106C36124145E5B000B5396 /* TestViewController.swift in Sources */,
 				D1FCBC92241E2899000C31DB /* IngredientTableViewCell.swift in Sources */,
