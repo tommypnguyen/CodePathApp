@@ -12,7 +12,7 @@ import Parse
 
 class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let cellSpacingHeight: CGFloat = 10
+    let cellSpacingHeight: CGFloat = 1
     
     @IBOutlet weak var tableView: UITableView!
     var indexToEdit: Int = 0
@@ -69,8 +69,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         
-        cell.layer.masksToBounds = true
-        cell.layer.cornerRadius = 15
+//        cell.layer.masksToBounds = true
+//        cell.layer.cornerRadius = 15
         
         return cell
     }
