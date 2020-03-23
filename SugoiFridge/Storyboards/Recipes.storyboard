@@ -111,13 +111,13 @@
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Loading..." translatesAutoresizingMaskIntoConstraints="NO" id="0wH-qe-mOz" userLabel="Steps Label">
                                                 <rect key="frame" x="0.0" y="20" width="340" height="435"/>
-                                                <color key="backgroundColor" name="Navy"/>
-                                                <color key="textColor" name="White"/>
+                                                <color key="backgroundColor" name="White"/>
+                                                <color key="textColor" name="Dark Pink"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" name="Navy"/>
+                                        <color key="backgroundColor" name="White"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="378.5" id="D9k-bJ-JfP"/>
                                             <constraint firstItem="0wH-qe-mOz" firstAttribute="centerY" secondItem="gnM-j1-SUO" secondAttribute="centerY" id="RZf-fS-sJ6"/>
@@ -200,9 +200,6 @@
         <image name="book.fill" catalog="system" width="64" height="50"/>
         <namedColor name="Dark Pink">
             <color red="0.91764705882352937" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Navy">
-            <color red="0.22745098039215686" green="0.27450980392156865" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Navy">
             <color red="0.22745098039215686" green="0.27450980392156865" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
