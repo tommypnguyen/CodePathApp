@@ -179,7 +179,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vpv-9p-v7p">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="Light Pink"/>
+                        <color key="tintColor" name="White"/>
+                        <color key="barTintColor" name="Dark Pink"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
                             <color key="textColor" name="Navy"/>

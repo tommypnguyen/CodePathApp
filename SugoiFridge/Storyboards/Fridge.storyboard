@@ -118,7 +118,6 @@
                                                 <constraint firstItem="59G-yh-Q7w" firstAttribute="leading" secondItem="o54-rM-uEO" secondAttribute="leading" constant="20" id="xbC-Dp-Ekc"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="Light Pink"/>
                                         <connections>
                                             <outlet property="amountLabel" destination="nz9-2t-62r" id="rsc-48-6oC"/>
                                             <outlet property="compartmentLabel" destination="0wc-oy-dTy" id="qPt-Bt-vny"/>
