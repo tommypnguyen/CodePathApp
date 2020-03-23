@@ -32,17 +32,26 @@ class EditFoodViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     @IBAction func change(_ sender: Any) {
-        let query = PFQuery(className:"Food")
-        query.getObjectInBackground(withId: ingredient?["objectId"] as! String) { (food: PFObject?, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let food = food {
-                food["quantity"] = self.quantityField.text
-                food["unit"] = self.unitField.text
-                food["compartment"] = self.
-                food["aisle"] =
-                food.saveInBackground()
+        //print(ingredient.objectId!)
+        
+        if checkFieldsEmpty() {
+            AlertControl.control.displayAlert(inVC: self, withTitle: ErrorMessages.editTitle.rawValue, andMsg: ErrorMessages.emptyMsg.rawValue)
+        } else {
+        
+            let query = PFQuery(className:"Food")
+            query.getObjectInBackground(withId: ingredient.objectId!) { (food: PFObject?, error: Error?) in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let food = food {
+                    food["quantity"] = (self.quantityField.text as! NSString).integerValue
+                    food["unit"] = self.unitField.text
+                    food["compartment"] = self.compartmentField.text
+                    food["aisle"] = self.drawerField.text
+                    food.saveInBackground()
+                }
             }
+            
+            self.performSegue(withIdentifier: "backToFoodSegue", sender: self)
         }
     }
     

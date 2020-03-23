@@ -55,7 +55,8 @@ class FridgeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         var image = UIImage()
         
-        if let foodImage = foodObj["image"] as! PFFileObject {
+        if foodObj["image"] != nil {
+            let foodImage = foodObj["image"] as! PFFileObject
             foodImage.getDataInBackground { (imageData: Data?, error: Error?) in
                 if let error = error {
                     print(error.localizedDescription)
