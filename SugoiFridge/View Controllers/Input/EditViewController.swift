@@ -22,7 +22,6 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     var ingredient : Ingredient?
     var index : Int?
     var selectedField : UITextField?
-    var countryList = ["Algeria", "Andorra", "Angola", "India", "Taiwan", "Thailand"]
 
     
     // MARK: - Initialization
@@ -76,9 +75,6 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             case compartmentField:
                 return Compartments.allValues.count
                 
-            case drawerField:
-                return countryList.count
-                
             default:
                 return 0
         }
@@ -92,9 +88,6 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             case compartmentField:
                 return Compartments.allValues[row].rawValue
                 
-            case drawerField:
-                return countryList[row]
-                
             default:
                 return "Unknown"
         }
@@ -107,9 +100,6 @@ class EditViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             
             case compartmentField:
                 compartmentField.text = Compartments.allValues[row].rawValue
-                
-            case drawerField:
-                drawerField.text = countryList[row]
                 
             default:
                 break

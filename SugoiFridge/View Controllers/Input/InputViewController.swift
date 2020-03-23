@@ -123,7 +123,6 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         // save each one to the database
         for ingredient in ingredientsList {
             ParseCaller.client.toUpdateIngredient(inVC: self, with: ingredient)
-//            saveIngredient(ingredient)
         }
         
         performSegue(withIdentifier: SegueIdentifiers.fridgeSegue.rawValue, sender: nil)
