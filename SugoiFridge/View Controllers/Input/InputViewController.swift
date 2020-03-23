@@ -118,6 +118,11 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
     
     
     // MARK: - Actions
+    
+    @IBAction func onCancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func onDone(_ sender: Any) {
         // loop through each ingredient in ingredientsList, and
         // save each one to the database
@@ -125,6 +130,6 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
             ParseCaller.client.toUpdateIngredient(inVC: self, with: ingredient)
         }
         
-        performSegue(withIdentifier: SegueIdentifiers.fridgeSegue.rawValue, sender: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
