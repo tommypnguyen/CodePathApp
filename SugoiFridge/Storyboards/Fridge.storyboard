@@ -146,7 +146,7 @@
                                 <action selector="logout:" destination="BQx-xH-i1y" id="kmS-6k-Adf"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="z7U-bw-6x9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="z7U-bw-6x9">
                             <connections>
                                 <segue destination="nZv-9j-3MU" kind="presentation" id="39v-D2-1yu"/>
                             </connections>
@@ -198,16 +198,17 @@
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="99.776785714285708"/>
         </scene>
-        <!--Item-->
+        <!--Fridge-->
         <scene sceneID="pmx-Pl-rkE">
             <objects>
                 <navigationController storyboardIdentifier="FridgeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Hcs-Ux-SYJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="rosette" catalog="system" id="bsh-qm-59r"/>
+                    <tabBarItem key="tabBarItem" title="Fridge" image="rectangle.grid.1x2.fill" catalog="system" id="bsh-qm-59r"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kd4-Uq-jZJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="Dark Pink"/>
+                        <color key="tintColor" name="White"/>
                         <color key="barTintColor" name="Dark Pink"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="Navy"/>
@@ -367,7 +368,7 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="64" height="52"/>
-        <image name="rosette" catalog="system" width="50" height="64"/>
+        <image name="rectangle.grid.1x2.fill" catalog="system" width="64" height="50"/>
         <namedColor name="Dark Pink">
             <color red="0.91764705882352937" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
