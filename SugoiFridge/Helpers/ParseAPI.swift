@@ -46,9 +46,10 @@ class ParseCaller {
         food[FoodDB.imageName.rawValue]     = ingredient.imageName
         
         // Load image into Parse Object
-        let imageData = ingredient.image.pngData()
-        let file      = PFFileObject(name: "image.png", data: imageData!)
-        food[FoodDB.image.rawValue] = file
+        if let imageData = ingredient.image.pngData() {
+            let file      = PFFileObject(name: "image.png", data: imageData)
+            food[FoodDB.image.rawValue] = file
+        }
         
         // Save new food ingredient parse object onto the database
         food.saveInBackground { (success, error) in

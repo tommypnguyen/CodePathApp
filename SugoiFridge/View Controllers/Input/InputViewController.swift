@@ -63,7 +63,7 @@ class InputViewController: UIViewController, UISearchBarDelegate, UITableViewDat
         
         let ingredient = ingredientsList[indexPath.row]
 
-        cell.ingredientNameLabel.text = ingredient.name
+        cell.ingredientNameLabel.text = ingredient.name.capitalizeFirstLetter()
         cell.amountLabel.text = String(format: "%.1f", ingredient.amount)
         cell.unitLabel.text   = ingredient.unit
         cell.drawerLabel.text = ingredient.aisle
