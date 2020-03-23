@@ -47,7 +47,7 @@ class ParseCaller {
         
         // Load image into Parse Object
         if let imageData = ingredient.image.pngData() {
-            let file      = PFFileObject(name: "image.png", data: imageData)
+            let file = PFFileObject(name: "image.png", data: imageData)
             food[FoodDB.image.rawValue] = file
         }
         
