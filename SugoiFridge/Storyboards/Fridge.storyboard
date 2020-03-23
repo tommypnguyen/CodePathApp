@@ -39,6 +39,12 @@
                                                     <color key="textColor" name="Grey"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yPJ-T7-qWu">
+                                                    <rect key="frame" x="16" y="8" width="85.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freezer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0wc-oy-dTy">
                                                     <rect key="frame" x="117.5" y="69.5" width="49" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -52,7 +58,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PaM-tv-juu">
-                                                    <rect key="frame" x="295" y="11" width="99" height="99"/>
+                                                    <rect key="frame" x="276" y="11" width="99" height="99"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="PaM-tv-juu" secondAttribute="height" multiplier="1:1" id="RK9-6t-nJ5"/>
                                                     </constraints>
@@ -75,15 +81,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yPJ-T7-qWu">
-                                                    <rect key="frame" x="16" y="8" width="85.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GEa-kQ-rLR">
+                                                    <rect key="frame" x="391" y="50" width="15" height="21.5"/>
+                                                    <color key="tintColor" name="Light Pink"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="GEa-kQ-rLR" secondAttribute="height" multiplier="3:5" id="cCQ-cc-Wbj"/>
+                                                        <constraint firstAttribute="width" constant="15" id="fCO-dZ-tou"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="PaM-tv-juu" secondAttribute="bottom" constant="11" id="1Bp-Xh-UC0"/>
+                                                <constraint firstAttribute="trailing" secondItem="GEa-kQ-rLR" secondAttribute="trailing" constant="8" id="3zi-nP-wfo"/>
                                                 <constraint firstItem="nz9-2t-62r" firstAttribute="leading" secondItem="Sgl-ld-avc" secondAttribute="trailing" constant="8" id="7Bf-yd-A2b"/>
                                                 <constraint firstItem="Sgl-ld-avc" firstAttribute="top" secondItem="D5A-ms-fO7" secondAttribute="bottom" constant="8" id="7sH-EK-yE0"/>
                                                 <constraint firstItem="PaM-tv-juu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0wc-oy-dTy" secondAttribute="trailing" constant="16" id="EYo-we-TgL"/>
@@ -92,6 +101,7 @@
                                                 <constraint firstItem="0wc-oy-dTy" firstAttribute="leading" secondItem="D5A-ms-fO7" secondAttribute="trailing" constant="8" id="KTO-9K-3PS"/>
                                                 <constraint firstItem="1da-la-N7C" firstAttribute="centerY" secondItem="GIW-Pf-0hT" secondAttribute="centerY" id="PZs-1j-VJu"/>
                                                 <constraint firstItem="PaM-tv-juu" firstAttribute="top" secondItem="o54-rM-uEO" secondAttribute="top" constant="11" id="SYf-nD-R9y"/>
+                                                <constraint firstItem="GEa-kQ-rLR" firstAttribute="leading" secondItem="PaM-tv-juu" secondAttribute="trailing" constant="16" id="T88-Kg-r5k"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Sgl-ld-avc" secondAttribute="bottom" constant="8" id="WhP-KF-2Eq"/>
                                                 <constraint firstItem="GIW-Pf-0hT" firstAttribute="leading" secondItem="yPJ-T7-qWu" secondAttribute="leading" id="X5b-jY-ZOX"/>
                                                 <constraint firstItem="1da-la-N7C" firstAttribute="leading" secondItem="GIW-Pf-0hT" secondAttribute="trailing" constant="8" id="ciX-77-1y6"/>
@@ -100,7 +110,7 @@
                                                 <constraint firstItem="yPJ-T7-qWu" firstAttribute="top" secondItem="o54-rM-uEO" secondAttribute="top" constant="8" id="gb6-gA-R1S"/>
                                                 <constraint firstItem="PaM-tv-juu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1da-la-N7C" secondAttribute="trailing" constant="16" id="hgJ-d9-DAH"/>
                                                 <constraint firstItem="yPJ-T7-qWu" firstAttribute="leading" secondItem="o54-rM-uEO" secondAttribute="leading" constant="16" id="i6V-N4-lf4"/>
-                                                <constraint firstAttribute="trailing" secondItem="PaM-tv-juu" secondAttribute="trailing" constant="20" id="kbI-ty-ijk"/>
+                                                <constraint firstItem="GEa-kQ-rLR" firstAttribute="centerY" secondItem="o54-rM-uEO" secondAttribute="centerY" id="kMO-mH-4Ab"/>
                                                 <constraint firstItem="nz9-2t-62r" firstAttribute="centerY" secondItem="Sgl-ld-avc" secondAttribute="centerY" id="nrH-E5-2KW"/>
                                                 <constraint firstItem="D5A-ms-fO7" firstAttribute="top" secondItem="1da-la-N7C" secondAttribute="bottom" constant="8" id="s7P-AE-it9"/>
                                                 <constraint firstItem="PDh-lq-XF5" firstAttribute="centerY" secondItem="nz9-2t-62r" secondAttribute="centerY" id="tNk-wt-DjR"/>
@@ -366,6 +376,7 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="64" height="52"/>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
         <image name="rectangle.grid.1x2.fill" catalog="system" width="64" height="50"/>
         <namedColor name="Dark Pink">
             <color red="0.91764705882352937" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
